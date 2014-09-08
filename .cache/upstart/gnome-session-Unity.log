@@ -1,0 +1,77 @@
+
+(gnome-terminal:2196): GLib-GIO-CRITICAL **: g_settings_get: the format string may not contain '&' (key 'monospace-font-name' from schema 'org.gnome.desktop.interface'). This call will probably stop working with a future version of glib.
+1410147522174	addons.repository	WARN	Unknown type id when parsing addon: 5
+1410147522181	addons.repository	WARN	Unknown type id when parsing addon: 5
+1410147522410	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+1410147522613	addons.update-checker	WARN	Update manifest for ubufox@ubuntu.com did not contain an updates property
+1410147522638	addons.update-checker	WARN	Update manifest for online-accounts@lists.launchpad.net did not contain an updates property
+1410147522685	addons.update-checker	WARN	Update manifest for {2e1445b0-2682-11e1-bfc2-0800200c9a66} did not contain an updates property
+1410147522704	addons.update-checker	WARN	Update manifest for webapps-team@lists.launchpad.net did not contain an updates property
+ERROR 2014-09-07 23:48:30 unity <unknown>:0 atk_object_ref_state_set: assertion 'ATK_IS_OBJECT (accessible)' failed
+ERROR 2014-09-07 23:48:30 unity <unknown>:0 atk_state_set_contains_state: assertion 'ATK_IS_STATE_SET (set)' failed
+ERROR 2014-09-07 23:48:30 unityy <unknown>:0 g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+WARN  2014-09-08 00:00:29 unity.dash.view DashView.cpp:1263 Search failed  ''=> Timed out waiting for scope proxy connection
+WARN  2014-09-08 00:00:29 unity.dash.scopeproxy ScopeProxy.cpp:516 Could not search '' on home.scope => Timed out waiting for scope proxy connection
+WARN  2014-09-08 00:00:39 unity.iconloader IconLoader.cpp:755 Unable to load icon file:/// at size -1x22: Can't open directory
+[1:1:0908/000045:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+Gtk-Message: Failed to load module "overlay-scrollbar"
+Gtk-Message: Failed to load module "unity-gtk-module"
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+[3208:3208:0908/000046:ERROR:browser_main_loop.cc(189)] GTK theme error: Unable to locate theme engine in module_path: "murrine",
+Gtk-Message: Failed to load module "canberra-gtk-module"
+GLib-GIO-Message: Using the 'memory' GSettings backend.  Your settings will not be saved or shared with other applications.
+[3250:3250:0908/000056:ERROR:gl_implementation_osmesa.cc(22)] Failed to load libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+[3250:3250:0908/000056:ERROR:gpu_child_thread.cc(143)] Exiting GPU process due to errors during initialization
+[3260:3260:0908/000058:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3262:3262:0908/000058:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3263:3263:0908/000058:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3267:3267:0908/000058:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3266:3266:0908/000058:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+WARN  2014-09-08 00:00:59 unityct(io) <unknown>:0 Desktop file '/usr/share/applications/google-chrome.desktop' is using a deprecated format for its actions that will be dropped soon.
+[3311:3311:0908/000100:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3326:3326:0908/000101:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3336:3336:0908/000102:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3365:3365:0908/000103:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3415:3415:0908/000103:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3476:3476:0908/000104:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3542:3542:0908/000104:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+[3608:3608:0908/000104:ERROR:image_metadata_extractor.cc(106)] Couldn't load libexif.
+ALSA lib conf.c:3314:(snd_config_hooks_call) Cannot open shared library libasound_module_conf_pulse.so
+ALSA lib control.c:953:(snd_ctl_open_noupdate) Invalid CTL hw:0
+ERROR 2014-09-08 00:02:23 unity <unknown>:0 atk_object_ref_state_set: assertion 'ATK_IS_OBJECT (accessible)' failed
+ERROR 2014-09-08 00:02:23 unity <unknown>:0 atk_state_set_contains_state: assertion 'ATK_IS_STATE_SET (set)' failed
+ERROR 2014-09-08 00:02:23 unityy <unknown>:0 g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+ERROR 2014-09-08 00:17:49 unity <unknown>:0 atk_object_ref_state_set: assertion 'ATK_IS_OBJECT (accessible)' failed
+ERROR 2014-09-08 00:17:49 unity <unknown>:0 atk_state_set_contains_state: assertion 'ATK_IS_STATE_SET (set)' failed
+ERROR 2014-09-08 00:17:49 unityy <unknown>:0 g_object_unref: assertion 'G_IS_OBJECT (object)' failed

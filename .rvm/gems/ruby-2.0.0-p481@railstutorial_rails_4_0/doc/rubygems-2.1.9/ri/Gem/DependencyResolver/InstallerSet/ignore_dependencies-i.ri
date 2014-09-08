@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"ignore_dependencies:ETI">Gem::DependencyResolver::InstallerSet#ignore_dependencies;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"1Only install gems in the always_install list;T:
+@fileI"6lib/rubygems/dependency_resolver/installer_set.rb;T:0@omit_headings_from_table_of_contents_below0F@I"*Gem::DependencyResolver::InstallerSet;FcRDoc::NormalClass0

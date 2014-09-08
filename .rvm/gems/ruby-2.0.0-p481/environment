@@ -1,0 +1,8 @@
+export PATH="/home/adminuser/.rvm/gems/ruby-2.0.0-p481/bin:/home/adminuser/.rvm/gems/ruby-2.0.0-p481@global/bin:/home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin:$PATH"
+export GEM_HOME='/home/adminuser/.rvm/gems/ruby-2.0.0-p481'
+export GEM_PATH='/home/adminuser/.rvm/gems/ruby-2.0.0-p481:/home/adminuser/.rvm/gems/ruby-2.0.0-p481@global'
+export MY_RUBY_HOME='/home/adminuser/.rvm/rubies/ruby-2.0.0-p481'
+export IRBRC='/home/adminuser/.rvm/rubies/ruby-2.0.0-p481/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT
+export RUBY_VERSION='ruby-2.0.0-p481'

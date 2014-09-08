@@ -1,0 +1,84 @@
+libGL error: failed to authenticate magic 1
+libGL error: failed to load driver: vboxvideo
+Script for ibus started at run_im.
+Script for auto started at run_im.
+Script for default started at run_im.
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd main process ended, respawning
+init: at-spi2-registryd respawning too fast, stopped
+init: upstart-event-bridge main process (1214) terminated with status 1
+init: upstart-event-bridge main process ended, respawning
+init: upstart-dbus-session-bridge main process (1247) terminated with status 1
+init: upstart-dbus-session-bridge main process ended, respawning
+init: upstart-dbus-system-bridge main process (1249) terminated with status 1
+init: upstart-dbus-system-bridge main process ended, respawning
+init: upstart-file-bridge main process (1253) terminated with status 1
+init: upstart-file-bridge main process ended, respawning
+init: upstart-event-bridge main process (4522) terminated with status 1
+init: upstart-event-bridge main process ended, respawning
+init: upstart-dbus-system-bridge main process (4532) terminated with status 1
+init: upstart-dbus-system-bridge main process ended, respawning
+init: upstart-file-bridge main process (4534) terminated with status 1
+init: upstart-file-bridge main process ended, respawning
+init: upstart-dbus-session-bridge main process (4536) terminated with status 1
+init: upstart-dbus-session-bridge main process ended, respawning
+init: upstart-event-bridge main process (4602) terminated with status 1
+init: upstart-event-bridge main process ended, respawning
+init: upstart-dbus-session-bridge main process (4612) terminated with status 1
+init: upstart-dbus-session-bridge main process ended, respawning
+init: upstart-file-bridge main process (4613) terminated with status 1
+init: upstart-file-bridge main process ended, respawning
+init: upstart-dbus-system-bridge main process (4614) terminated with status 1
+init: upstart-dbus-system-bridge main process ended, respawning
+init: upstart-event-bridge main process (6428) terminated with status 1
+init: upstart-event-bridge main process ended, respawning
+init: upstart-dbus-system-bridge main process (6457) terminated with status 1
+init: upstart-dbus-system-bridge main process ended, respawning
+init: upstart-file-bridge main process (6458) terminated with status 1
+init: upstart-file-bridge main process ended, respawning
+init: upstart-dbus-session-bridge main process (6459) terminated with status 1
+init: upstart-dbus-session-bridge main process ended, respawning
+init: upstart-event-bridge main process (6515) terminated with status 1
+init: upstart-event-bridge main process ended, respawning
+init: upstart-dbus-system-bridge main process (6522) terminated with status 1
+init: upstart-dbus-system-bridge main process ended, respawning
+init: upstart-file-bridge main process (6525) terminated with status 1
+init: upstart-file-bridge main process ended, respawning
+init: upstart-dbus-session-bridge main process (6528) terminated with status 1
+init: upstart-dbus-session-bridge main process ended, respawning

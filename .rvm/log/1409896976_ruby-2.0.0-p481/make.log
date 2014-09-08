@@ -1,0 +1,783 @@
+[2014-09-05 02:06:52] __rvm_make
+__rvm_make () 
+{ 
+    \make "$@" || return $?
+}
+current path: /home/adminuser/.rvm/src/ruby-2.0.0-p481
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/adminuser/.rvm/bin
+command(2): __rvm_make -j1
+++ make -j1
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -shared
+	CFLAGS = -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -ansi -std=iso9899:199409  -fPIC 
+	XCFLAGS = -include ruby/config.h -include ruby/missing.h -D_FORTIFY_SOURCE=2 -fstack-protector -fno-strict-overflow -fvisibility=hidden -DRUBY_EXPORT
+	CPPFLAGS =   -I. -I.ext/include/x86_64-linux -I./include -I.
+	DLDFLAGS = -Wl,-soname,libruby.so.2.0  -fstack-protector  
+	SOLIBS = -lpthread -lrt -ldl -lcrypt -lm  
+compiling main.c
+compiling dmydln.c
+compiling dmyencoding.c
+compiling version.c
+compiling dmyversion.c
+compiling miniprelude.c
+copying dummy probes.h
+compiling array.c
+compiling bignum.c
+compiling class.c
+compiling compar.c
+compiling complex.c
+compiling dir.c
+compiling dln_find.c
+compiling enum.c
+compiling enumerator.c
+compiling error.c
+compiling eval.c
+compiling load.c
+compiling proc.c
+compiling file.c
+compiling gc.c
+compiling hash.c
+compiling inits.c
+compiling io.c
+compiling marshal.c
+compiling math.c
+compiling node.c
+compiling numeric.c
+compiling object.c
+compiling pack.c
+compiling parse.c
+compiling process.c
+compiling random.c
+compiling range.c
+compiling rational.c
+compiling re.c
+compiling regcomp.c
+compiling regenc.c
+compiling regerror.c
+compiling regexec.c
+compiling regparse.c
+compiling regsyntax.c
+compiling ruby.c
+compiling safe.c
+compiling signal.c
+compiling sprintf.c
+compiling st.c
+compiling strftime.c
+compiling string.c
+compiling struct.c
+compiling time.c
+time.c: In function ‘localtimew’:
+time.c:1820:19: warning: ‘tm.tm_isdst’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     result->isdst = isdst;
+                   ^
+compiling transcode.c
+compiling util.c
+compiling variable.c
+compiling compile.c
+compiling debug.c
+compiling iseq.c
+In file included from vm_core.h:25:0,
+                 from eval_intern.h:5,
+                 from iseq.c:14:
+iseq.c: In function ‘iseq_load’:
+iseq.c:536:54: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  cached_map = ATOMIC_PTR_CAS(type_map_cache, (struct st_table *)0, type_map);
+                                                      ^
+ruby_atomic.h:13:36: note: in definition of macro ‘ATOMIC_CAS’
+ ({ __typeof__(oldval) oldvaldup = (oldval); /* oldval should not be modified */ \
+                                    ^
+ruby_atomic.h:166:53: note: in expansion of macro ‘ATOMIC_SIZE_CAS’
+ #   define ATOMIC_PTR_CAS(var, oldval, val) (void *)ATOMIC_SIZE_CAS(*(size_t *)&(var), (size_t)(oldval), (size_t)(val))
+                                                     ^
+iseq.c:536:15: note: in expansion of macro ‘ATOMIC_PTR_CAS’
+  cached_map = ATOMIC_PTR_CAS(type_map_cache, (struct st_table *)0, type_map);
+               ^
+compiling vm.c
+compiling vm_dump.c
+compiling vm_backtrace.c
+compiling vm_trace.c
+compiling thread.c
+compiling cont.c
+compiling ./enc/ascii.c
+compiling ./enc/us_ascii.c
+compiling ./enc/unicode.c
+compiling ./enc/utf_8.c
+compiling newline.c
+compiling ./missing/strlcpy.c
+compiling ./missing/strlcat.c
+compiling ./missing/setproctitle.c
+compiling addr2line.c
+compiling dmyext.c
+linking miniruby
+rbconfig.rb updated
+generating enc.mk
+compiling dln.c
+compiling encoding.c
+generating prelude.c
+compiling prelude.c
+linking static-library libruby-static.a
+verifying static-library libruby-static.a
+linking shared-library libruby.so.2.0.0
+generating encdb.h
+encdb.h unchanged
+making enc
+make[1]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+compiling ./enc/encdb.c
+linking encoding encdb.so
+compiling ./enc/big5.c
+linking encoding big5.so
+compiling ./enc/cp949.c
+linking encoding cp949.so
+compiling ./enc/emacs_mule.c
+linking encoding emacs_mule.so
+compiling ./enc/euc_jp.c
+linking encoding euc_jp.so
+compiling ./enc/euc_kr.c
+linking encoding euc_kr.so
+compiling ./enc/euc_tw.c
+linking encoding euc_tw.so
+compiling ./enc/gb2312.c
+linking encoding gb2312.so
+compiling ./enc/gb18030.c
+linking encoding gb18030.so
+compiling ./enc/gbk.c
+linking encoding gbk.so
+compiling ./enc/iso_8859_1.c
+linking encoding iso_8859_1.so
+compiling ./enc/iso_8859_2.c
+linking encoding iso_8859_2.so
+compiling ./enc/iso_8859_3.c
+linking encoding iso_8859_3.so
+compiling ./enc/iso_8859_4.c
+linking encoding iso_8859_4.so
+compiling ./enc/iso_8859_5.c
+linking encoding iso_8859_5.so
+compiling ./enc/iso_8859_6.c
+linking encoding iso_8859_6.so
+compiling ./enc/iso_8859_7.c
+linking encoding iso_8859_7.so
+compiling ./enc/iso_8859_8.c
+linking encoding iso_8859_8.so
+compiling ./enc/iso_8859_9.c
+linking encoding iso_8859_9.so
+compiling ./enc/iso_8859_10.c
+linking encoding iso_8859_10.so
+compiling ./enc/iso_8859_11.c
+linking encoding iso_8859_11.so
+compiling ./enc/iso_8859_13.c
+linking encoding iso_8859_13.so
+compiling ./enc/iso_8859_14.c
+linking encoding iso_8859_14.so
+compiling ./enc/iso_8859_15.c
+linking encoding iso_8859_15.so
+compiling ./enc/iso_8859_16.c
+linking encoding iso_8859_16.so
+compiling ./enc/koi8_r.c
+linking encoding koi8_r.so
+compiling ./enc/koi8_u.c
+linking encoding koi8_u.so
+compiling ./enc/shift_jis.c
+linking encoding shift_jis.so
+compiling ./enc/utf_16be.c
+linking encoding utf_16be.so
+compiling ./enc/utf_16le.c
+linking encoding utf_16le.so
+compiling ./enc/utf_32be.c
+linking encoding utf_32be.so
+compiling ./enc/utf_32le.c
+linking encoding utf_32le.so
+compiling ./enc/windows_31j.c
+linking encoding windows_31j.so
+compiling ./enc/windows_1251.c
+linking encoding windows_1251.so
+make[1]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+making srcs under enc
+make[1]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+make[1]: Nothing to be done for `srcs'.
+make[1]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+generating transdb.h
+transdb.h unchanged
+making trans
+make[1]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+compiling ./enc/trans/transdb.c
+linking transcoder transdb.so
+compiling ./enc/trans/big5.c
+linking transcoder big5.so
+compiling ./enc/trans/chinese.c
+linking transcoder chinese.so
+compiling ./enc/trans/emoji.c
+linking transcoder emoji.so
+compiling ./enc/trans/emoji_iso2022_kddi.c
+linking transcoder emoji_iso2022_kddi.so
+compiling ./enc/trans/emoji_sjis_docomo.c
+linking transcoder emoji_sjis_docomo.so
+compiling ./enc/trans/emoji_sjis_kddi.c
+linking transcoder emoji_sjis_kddi.so
+compiling ./enc/trans/emoji_sjis_softbank.c
+linking transcoder emoji_sjis_softbank.so
+compiling ./enc/trans/escape.c
+linking transcoder escape.so
+compiling ./enc/trans/gb18030.c
+linking transcoder gb18030.so
+compiling ./enc/trans/gbk.c
+linking transcoder gbk.so
+compiling ./enc/trans/iso2022.c
+linking transcoder iso2022.so
+compiling ./enc/trans/japanese.c
+linking transcoder japanese.so
+compiling ./enc/trans/japanese_euc.c
+linking transcoder japanese_euc.so
+compiling ./enc/trans/japanese_sjis.c
+linking transcoder japanese_sjis.so
+compiling ./enc/trans/korean.c
+linking transcoder korean.so
+compiling ./enc/trans/single_byte.c
+linking transcoder single_byte.so
+compiling ./enc/trans/utf8_mac.c
+linking transcoder utf8_mac.so
+compiling ./enc/trans/utf_16_32.c
+linking transcoder utf_16_32.so
+make[1]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+making encs
+make[1]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+make[1]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+generating makefile exts.mk
+configuring -test-/array/resize
+configuring -test-/bug-3571
+configuring -test-/bug-3662
+configuring -test-/bug-5832
+configuring -test-/debug
+configuring -test-/exception
+configuring -test-/fatal
+configuring -test-/funcall
+configuring -test-/iter
+configuring -test-/load/dot.dot
+configuring -test-/marshal/compat
+configuring -test-/marshal/usr
+configuring -test-/method
+configuring -test-/num2int
+configuring -test-/old_thread_select
+configuring -test-/path_to_class
+configuring -test-/printf
+configuring -test-/st/numhash
+configuring -test-/st/update
+configuring -test-/string
+configuring -test-/symbol
+configuring -test-/typeddata
+configuring -test-/wait_for_single_fd
+configuring -test-/win32/dln
+Failed to configure -test-/win32/dln. It will not be installed.
+configuring -test-/win32/fd_setsize
+Failed to configure -test-/win32/fd_setsize. It will not be installed.
+configuring bigdecimal
+configuring continuation
+configuring coverage
+configuring curses
+header: ncurses.h
+library: ncurses
+configuring date
+configuring dbm
+header: gdbm-ndbm.h
+library: gdbm_compat
+configuring digest
+configuring digest/bubblebabble
+configuring digest/md5
+configuring digest/rmd160
+configuring digest/sha1
+configuring digest/sha2
+configuring dl
+configuring dl/callback
+configuring dl/win32
+Failed to configure dl/win32. It will not be installed.
+configuring etc
+configuring fcntl
+configuring fiber
+configuring fiddle
+configuring fiddle/win32
+Failed to configure fiddle/win32. It will not be installed.
+configuring gdbm
+configuring io/console
+configuring io/nonblock
+configuring io/wait
+configuring json
+configuring json/generator
+configuring json/parser
+configuring mathn/complex
+configuring mathn/rational
+configuring nkf
+configuring objspace
+configuring openssl
+configuring pathname
+configuring psych
+configuring pty
+configuring racc/cparse
+configuring readline
+configuring ripper
+configuring sdbm
+configuring socket
+configuring stringio
+configuring strscan
+configuring syslog
+configuring tk
+........
+check struct members..
+check libraries....
+Use ActiveTcl libraries (if available).
+Search tclConfig.sh and tkConfig.sh...............................
+Fail to find [tclConfig.sh, tkConfig.sh]
+Use X11 libraries (or use TK_XINCLUDES/TK_XLIBSW information on tkConfig.sh).
+Warning:: cannot find X11 library. tcltklib will not be compiled (tcltklib is disabled on your Ruby. That is, Ruby/Tk will not work). Please check configure options. If your Tcl/Tk don't require X11, please try --without-X11.
+Can't find X11 libraries. 
+So, can't make tcltklib.so which is required by Ruby/Tk.
+Failed to configure tk. It will not be installed.
+configuring tk/tkutil
+Failed to configure tk/tkutil. It will not be installed.
+configuring win32ole
+Failed to configure win32ole. It will not be installed.
+configuring zlib
+make[1]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/array/resize'
+compiling resize.c
+linking shared-object -test-/array/resize.so
+installing default resize libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/array/resize'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/bug-3571'
+compiling bug.c
+linking shared-object -test-/bug-3571/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/bug-3571'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/bug-3662'
+compiling bug.c
+linking shared-object -test-/bug-3662/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/bug-3662'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/bug-5832'
+compiling bug.c
+linking shared-object -test-/bug-5832/bug.so
+installing default bug libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/bug-5832'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/debug'
+compiling init.c
+compiling inspector.c
+linking shared-object -test-/debug.so
+installing default debug libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/debug'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/exception'
+compiling ensured.c
+compiling init.c
+compiling enc_raise.c
+linking shared-object -test-/exception.so
+installing default exception libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/exception'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/fatal'
+compiling rb_fatal.c
+linking shared-object -test-/fatal/rb_fatal.so
+installing default rb_fatal libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/fatal'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/funcall'
+compiling passing_block.c
+linking shared-object -test-/funcall/funcall.so
+installing default funcall libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/funcall'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/iter'
+compiling break.c
+linking shared-object -test-/iter/break.so
+installing default break libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/iter'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/load/dot.dot'
+compiling dot.dot.c
+linking shared-object -test-/load/dot.dot/dot.dot.so
+installing default dot.dot libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/load/dot.dot'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/marshal/compat'
+compiling usrcompat.c
+linking shared-object -test-/marshal/compat.so
+installing default compat libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/marshal/compat'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/marshal/usr'
+compiling usrmarshal.c
+linking shared-object -test-/marshal/usr.so
+installing default usr libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/marshal/usr'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/method'
+compiling init.c
+compiling arity.c
+linking shared-object -test-/method.so
+installing default method libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/method'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/num2int'
+compiling num2int.c
+linking shared-object -test-/num2int/num2int.so
+installing default num2int libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/num2int'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/old_thread_select'
+compiling old_thread_select.c
+linking shared-object -test-/old_thread_select/old_thread_select.so
+installing default old_thread_select libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/old_thread_select'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/path_to_class'
+compiling path_to_class.c
+linking shared-object -test-/path_to_class/path_to_class.so
+installing default path_to_class libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/path_to_class'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/printf'
+compiling printf.c
+linking shared-object -test-/printf.so
+installing default printf libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/printf'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/st/numhash'
+compiling numhash.c
+linking shared-object -test-/st/numhash.so
+installing default numhash libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/st/numhash'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/st/update'
+compiling update.c
+linking shared-object -test-/st/update.so
+installing default update libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/st/update'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/string'
+compiling cstr.c
+compiling qsort.c
+compiling enc_associate.c
+compiling coderange.c
+compiling init.c
+compiling set_len.c
+compiling enc_str_buf_cat.c
+compiling ellipsize.c
+compiling modify.c
+linking shared-object -test-/string/string.so
+installing default string libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/string'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/symbol'
+compiling init.c
+compiling type.c
+compiling intern.c
+linking shared-object -test-/symbol/symbol.so
+installing default symbol libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/symbol'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/typeddata'
+compiling typeddata.c
+linking shared-object -test-/typeddata/typeddata.so
+installing default typeddata libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/typeddata'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/wait_for_single_fd'
+compiling wait_for_single_fd.c
+linking shared-object -test-/wait_for_single_fd/wait_for_single_fd.so
+installing default wait_for_single_fd libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/wait_for_single_fd'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/win32/dln'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/win32/dln'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/win32/fd_setsize'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/-test-/win32/fd_setsize'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/bigdecimal'
+compiling bigdecimal.c
+linking shared-object bigdecimal.so
+installing default bigdecimal libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/bigdecimal'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/continuation'
+compiling continuation.c
+linking shared-object continuation.so
+installing default continuation libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/continuation'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/coverage'
+compiling coverage.c
+linking shared-object coverage.so
+installing default coverage libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/coverage'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/curses'
+compiling curses.c
+linking shared-object curses.so
+installing default curses libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/curses'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/date'
+compiling date_core.c
+compiling date_parse.c
+compiling date_strptime.c
+compiling date_strftime.c
+linking shared-object date_core.so
+installing default date_core libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/date'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/dbm'
+compiling dbm.c
+linking shared-object dbm.so
+installing default dbm libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/dbm'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest'
+compiling digest.c
+linking shared-object digest.so
+installing digest libraries
+installing default digest libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/bubblebabble'
+compiling bubblebabble.c
+linking shared-object digest/bubblebabble.so
+installing default bubblebabble libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/bubblebabble'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/md5'
+compiling md5init.c
+compiling md5ossl.c
+linking shared-object digest/md5.so
+installing default md5 libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/md5'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/rmd160'
+compiling rmd160init.c
+compiling rmd160.c
+linking shared-object digest/rmd160.so
+installing default rmd160 libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/rmd160'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/sha1'
+compiling sha1init.c
+compiling sha1ossl.c
+linking shared-object digest/sha1.so
+installing default sha1 libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/sha1'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/sha2'
+compiling sha2init.c
+compiling sha2ossl.c
+linking shared-object digest/sha2.so
+installing default sha2 libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/digest/sha2'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/dl'
+compiling dl.c
+compiling cfunc.c
+compiling cptr.c
+compiling handle.c
+linking shared-object dl.so
+installing dl libraries
+installing default dl libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/dl'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/dl/callback'
+compiling callback.c
+compiling callback-0.c
+compiling callback-1.c
+compiling callback-2.c
+compiling callback-3.c
+compiling callback-4.c
+compiling callback-5.c
+compiling callback-6.c
+compiling callback-7.c
+compiling callback-8.c
+linking shared-object dl/callback.so
+installing default callback libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/dl/callback'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/dl/win32'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/dl/win32'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/etc'
+compiling etc.c
+linking shared-object etc.so
+installing default etc libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/etc'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/fcntl'
+compiling fcntl.c
+linking shared-object fcntl.so
+installing default fcntl libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/fcntl'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/fiber'
+compiling fiber.c
+linking shared-object fiber.so
+installing default fiber libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/fiber'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/fiddle'
+compiling fiddle.c
+compiling conversions.c
+compiling handle.c
+compiling pointer.c
+compiling function.c
+compiling closure.c
+linking shared-object fiddle.so
+installing default fiddle libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/fiddle'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/fiddle/win32'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/fiddle/win32'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/gdbm'
+compiling gdbm.c
+linking shared-object gdbm.so
+installing default gdbm libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/gdbm'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/io/console'
+compiling console.c
+linking shared-object io/console.so
+installing default console libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/io/console'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/io/nonblock'
+compiling nonblock.c
+linking shared-object io/nonblock.so
+installing default nonblock libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/io/nonblock'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/io/wait'
+compiling wait.c
+linking shared-object io/wait.so
+installing default wait libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/io/wait'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/json'
+installing default libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/json'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/json/generator'
+compiling generator.c
+linking shared-object json/ext/generator.so
+installing default generator libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/json/generator'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/json/parser'
+compiling parser.c
+linking shared-object json/ext/parser.so
+installing default parser libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/json/parser'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/mathn/complex'
+compiling complex.c
+linking shared-object mathn/complex.so
+installing default complex libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/mathn/complex'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/mathn/rational'
+compiling rational.c
+linking shared-object mathn/rational.so
+installing default rational libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/mathn/rational'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/nkf'
+compiling nkf.c
+linking shared-object nkf.so
+installing default nkf libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/nkf'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/objspace'
+compiling objspace.c
+linking shared-object objspace.so
+installing default objspace libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/objspace'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/openssl'
+compiling ossl_asn1.c
+compiling ossl_ssl.c
+compiling ossl_x509name.c
+compiling ossl_pkey_ec.c
+compiling ossl_pkey_dsa.c
+compiling ossl_pkcs12.c
+compiling ossl_ssl_session.c
+compiling ossl_ns_spki.c
+compiling ossl_x509crl.c
+compiling ossl_engine.c
+compiling ossl_x509.c
+compiling ossl_x509attr.c
+compiling ossl_ocsp.c
+compiling ossl_rand.c
+compiling ossl_x509store.c
+compiling ossl_bio.c
+compiling ossl_x509req.c
+compiling ossl_pkcs7.c
+compiling ossl_cipher.c
+compiling openssl_missing.c
+compiling ossl_pkey_rsa.c
+compiling ossl_bn.c
+compiling ossl_digest.c
+compiling ossl_hmac.c
+compiling ossl_pkey_dh.c
+compiling ossl_pkcs5.c
+compiling ossl_x509cert.c
+compiling ossl_pkey.c
+compiling ossl.c
+compiling ossl_x509ext.c
+compiling ossl_x509revoked.c
+compiling ossl_config.c
+linking shared-object openssl.so
+installing default openssl libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/openssl'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/pathname'
+compiling pathname.c
+linking shared-object pathname.so
+installing default pathname libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/pathname'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/psych'
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+linking shared-object psych.so
+installing default psych libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/psych'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/pty'
+compiling pty.c
+pty.c: In function ‘chfunc’:
+pty.c:143:12: warning: ignoring return value of ‘seteuid’, declared with attribute warn_unused_result [-Wunused-result]
+     seteuid(getuid());
+            ^
+linking shared-object pty.so
+installing default pty libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/pty'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/racc/cparse'
+compiling cparse.c
+linking shared-object racc/cparse.so
+installing default cparse libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/racc/cparse'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/readline'
+compiling readline.c
+linking shared-object readline.so
+installing default readline libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/readline'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/ripper'
+compiling ripper.c
+linking shared-object ripper.so
+installing default ripper libraries
+checking ../.././parse.y and ../.././ext/ripper/eventids2.c
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/ripper'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/sdbm'
+compiling init.c
+compiling _sdbm.c
+linking shared-object sdbm.so
+installing default sdbm libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/sdbm'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/socket'
+generating constant definitions
+compiling init.c
+compiling constants.c
+compiling basicsocket.c
+compiling socket.c
+compiling ipsocket.c
+compiling tcpsocket.c
+compiling tcpserver.c
+compiling sockssocket.c
+compiling udpsocket.c
+compiling unixsocket.c
+compiling unixserver.c
+compiling option.c
+compiling ancdata.c
+compiling raddrinfo.c
+linking shared-object socket.so
+installing default socket libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/socket'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/stringio'
+compiling stringio.c
+linking shared-object stringio.so
+installing default stringio libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/stringio'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/strscan'
+compiling strscan.c
+linking shared-object strscan.so
+installing default strscan libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/strscan'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/syslog'
+compiling syslog.c
+linking shared-object syslog.so
+installing default syslog libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/syslog'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/tk'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/tk'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/tk/tkutil'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/tk/tkutil'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/win32ole'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/win32ole'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/zlib'
+compiling zlib.c
+linking shared-object zlib.so
+installing default zlib libraries
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481/ext/zlib'
+make[2]: Entering directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+linking shared-library libruby.so.2.0.0
+linking ruby
+make[2]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'
+make[1]: Leaving directory `/home/adminuser/.rvm/src/ruby-2.0.0-p481'

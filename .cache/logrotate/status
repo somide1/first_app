@@ -1,0 +1,19 @@
+logrotate state -- version 2
+"/home/adminuser/.cache/upstart/update-notifier-cds.log" 2014-7-30-0:23:24
+"/home/adminuser/.cache/upstart/gnome-session-Unity.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/window-stack-bridge.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/indicator-session.log" 2014-9-7-23:0:0
+"/home/adminuser/.cache/upstart/dbus.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/hud.log" 2014-9-4-9:19:52
+"/home/adminuser/.cache/upstart/indicator-bluetooth.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/indicator-printers.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/unity7.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/unity-panel-service.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/im-config.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/indicator-power.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/unity-settings-daemon.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/upstart-event-bridge.log" 2014-9-5-1:28:54
+"/home/adminuser/.cache/upstart/logrotate.log" 2014-9-4-9:19:52
+"/home/adminuser/.cache/upstart/indicator-sound.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/update-notifier-release.log" 2014-9-7-23:37:20
+"/home/adminuser/.cache/upstart/at-spi2-registryd.log" 2014-9-7-23:37:20

@@ -1,0 +1,27 @@
+[2014-09-05 02:26:46] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /home/adminuser/.rvm/src/ruby-2.0.0-p481
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/adminuser/.rvm/bin
+command(9): __rvm_set_executable /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/erb /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/gem /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/irb /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/rake /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/rdoc /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/ri /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/ruby /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/testrb
+++ for __file in '"$@"'
+++ [[ -x /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/erb ]]
+++ for __file in '"$@"'
+++ [[ -x /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/gem ]]
+++ for __file in '"$@"'
+++ [[ -x /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/irb ]]
+++ for __file in '"$@"'
+++ [[ -x /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/rake ]]
+++ for __file in '"$@"'
+++ [[ -x /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/rdoc ]]
+++ for __file in '"$@"'
+++ [[ -x /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/ri ]]
+++ for __file in '"$@"'
+++ [[ -x /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/ruby ]]
+++ for __file in '"$@"'
+++ [[ -x /home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/testrb ]]

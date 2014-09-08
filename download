@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"20c4a8c482","applicationID":"454369","transactionName":"dl5cQkcLXF9XRBoBW0JfXllUAEMcW1hRAEw=","queueTime":17,"applicationTime":32,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-412.min.js"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t("D5DuLP")},{}],G9z0Bl:[function(t,n){function e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&p&&p.body){l.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",i("mark",["onload",a()]);var n=p.createElement("script");n.src=l.proto+t.agent,p.body.appendChild(n)}}function r(){"complete"===p.readyState&&o()}function o(){i("mark",["domContent",a()])}function a(){return(new Date).getTime()}var i=t("handle"),u=window,p=u.document,s="addEventListener",c="attachEvent",f=(""+location).split("?")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(p[c]("onreadystatechange",r),u[c]("onload",e)),i("mark",["firstbyte",a()])},{handle:"D5DuLP"}],loader:[function(t,n){n.exports=t("G9z0Bl")},{}]},{},["G9z0Bl"]);</script>
+
+  <title>Git - Downloads</title>
+
+  <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+  <link rel="alternate" href="/blog.rss" type="application/rss+xml" title="Git - Blog">
+
+  <link href="/assets/git-scm-4ca2a39941dba9611ea74a3be8fd4b8b.css" media="screen" rel="stylesheet" />
+  <script src="/assets/modernizr-043f86b4743c71560452f78c6804d6e0.js"></script>
+<script src="/assets/modernizr-tests-cb2a1935007e6a0c10417894d9823228.js"></script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="/javascripts/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <script src="http://use.typekit.com/jsq2fql.js" type="text/javascript"></script>
+  <script>
+    //<![CDATA[
+      try{Typekit.load();}catch(e){}
+    //]]>
+  </script>
+
+</head>
+
+<body id="downloads">
+
+  <div class="inner">
+    <header>
+  <a href="/"><img src="/images/logo@2x.png" width="110" height="46" alt="Git" /></a>
+  <span id="tagline">
+    <em>--</em>everything-is-local
+  </span>
+
+  <form id="search" action="/search/results">
+    <input id="search-text" name="search" placeholder="Search entire site..." autocomplete="off" type="text" />
+  </form>
+  <div id="search-results"></div>
+</header>
+  </div> <!-- .inner -->
+
+    <div class="inner">
+      <div id="content-wrapper">
+        <aside class="sidebar">
+  <nav>
+    <ul>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/doc">Documentation</a>
+        <ul class="">
+          <li>
+            <a href="/docs">Reference</a>
+          </li>
+          <li>
+            <a href="/book">Book</a>
+          </li>
+          <li>
+            <a href="/videos">Videos</a>
+          </li>
+          <li>
+            <a href="/doc/ext">External Links</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/blog">Blog</a>
+      </li>
+      <li>
+        <a class="active" href="/downloads">Downloads</a>
+        <ul class="expanded">
+          <li>
+            <a href="/downloads/guis">GUI Clients</a>
+          </li>
+          <li>
+            <a href="/downloads/logos">Logos</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/community">Community</a>
+      </li>
+    </ul>
+      <hr class="sidebar">
+      <div class="callout">
+  <p>The entire <strong><a href="/book">Pro Git book</a></strong> written
+  by Scott Chacon is available to <a href="/book">read online for free</a>.
+  Dead tree versions are available on <a href="http://www.amazon.com/gp/product/1430218339?ie=UTF8&camp=1789&creative=9325&creativeASIN=1430218339&linkCode=as2&tag=git-sfconservancy-20">Amazon.com</a>. 
+  </p>
+</div>
+
+
+  </nav>
+</aside>
+        <div id="content">
+          <div id='main'>
+<div class='two-column'>
+<div class='column-left'>
+<h1>Downloads</h1>
+<div class='callout'>
+<table class='binaries'>
+<tr>
+<td><a class="icon mac" href="/download/mac">Mac OS X</a></td>
+<td><a class="icon windows" href="/download/win">Windows</a></td>
+</tr>
+<tr>
+<td><a class="icon linux" href="/download/linux">Linux</a></td>
+<td><a class="icon solaris" href="/download/linux">Solaris</a></td>
+</tr>
+</table>
+</div>
+<p>
+<a href="https://www.kernel.org/pub/software/scm/git/">Older releases</a> are available and the <a href="https://github.com/git/git">Git source repository</a> is on GitHub.
+</p>
+</div>
+<div class='column-right'>
+<div class="monitor">
+
+  <h4> Latest source Release </h4>
+
+  <span class="version">
+    2.1.0
+  </span>
+
+  <a href="https://raw.github.com/git/git/master/Documentation/RelNotes/2.1.0.txt">Release Notes</a>
+  <span class="release-date">
+    (2014-08-15)
+  </span>
+
+  <a class="button" href="https://www.kernel.org/pub/software/scm/git/" id="download-link">Download Source Code</a>
+</div>
+
+</div>
+</div>
+<div class='callout' id='more-downloads'>
+<div class='two-column'>
+<div class='column-left'>
+<h2>GUI Clients</h2>
+<p>
+Git comes with built-in GUI tools (<strong>git-gui</strong>, <strong>gitk</strong>), but there are several third-party tools for users looking for a platform-specific experience.
+</p>
+<p>
+<strong><a href="/downloads/guis">View GUI Clients →</a></strong>
+</p>
+</div>
+<div class='column-right'>
+<h2>Logos</h2>
+<p>Various Git logos in PNG (bitmap) and EPS (vector) formats are available for use in online and print projects.</p>
+<p>
+<strong><a href="/downloads/logos">View Logos →</a></strong>
+</p>
+</div>
+</div>
+</div>
+<h2>Git via Git</h2>
+<p>
+If you already have Git installed, you can get the latest development version via Git itself:
+</p>
+<code>git clone https://github.com/git/git</code>
+<p>
+You can also always browse the current contents of the git repository using the <a href="https://github.com/git/git">web interface</a>.
+</p>
+</div>
+
+        </div>
+      </div>
+      <footer>
+  <div class="site-source">
+    This <a href="https://github.com/git/git-scm.com/blob/master/README.md#license">open sourced</a> site is <a href="https://github.com/git/git-scm.com">hosted on GitHub.</a><br>
+    Patches, suggestions, and comments are welcome.
+  </div>
+  <div class="sfc-member">
+    Git is a member of <a href="/sfc">Software Freedom Conservancy</a>
+  </div>
+</footer>
+
+<script src="/assets/jquery-1.7.1.min-7d83a46fe742420c2078ab18db47e550.js"></script>
+<script src="/assets/jquery-ui-1.8.18.custom.min-8f328462df1c89ddcab2fd9ff4bcd200.js"></script>
+<script src="/assets/jquery.defaultvalue-40eab7116d1a5251efcab8fb1d800c55.js"></script>
+<script src="/assets/session.min-659c1fb233d544f6400a84586c8446b5.js"></script>
+<script src="/assets/site-f9b6e726ec44686b3471db05d1954b4b.js"></script>
+
+    </div>
+
+</body>
+</html>

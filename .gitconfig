@@ -1,0 +1,7 @@
+[user]
+	name = olumuyiwa
+	email = somide1@umbc.edu
+[alias]
+	co = checkout
+[core]
+	editor = subl -w

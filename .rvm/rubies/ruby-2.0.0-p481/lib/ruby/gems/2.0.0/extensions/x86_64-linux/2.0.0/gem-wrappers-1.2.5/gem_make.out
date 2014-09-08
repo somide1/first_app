@@ -1,0 +1,10 @@
+/home/adminuser/.rvm/rubies/ruby-2.0.0-p481/bin/ruby extconf.rb
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+make: Nothing to be done for `install'.

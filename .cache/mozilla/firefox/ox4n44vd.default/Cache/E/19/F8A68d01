@@ -1,0 +1,836 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 1. First steps</title><meta name="generator" content="DocBook XSL Stylesheets V1.69.1"><link rel="start" href="index.html" title="Oracle VM VirtualBox®"><link rel="up" href="index.html" title="Oracle VM VirtualBox®"><link rel="prev" href="index.html" title="Oracle VM VirtualBox®"><link rel="next" href="ch02.html" title="Chapter 2. Installation details"><style type="text/css"><!--
+   body
+   {
+     font-family:  Verdana, Sans-serif, Arial, 'Trebuchet MS', 'Times New Roman';
+     font-size: small;
+   }
+   h2.title
+   {
+     font-family: Verdana, Sans-serif, Arial, 'Trebuchet MS', 'Times New Roman';
+     margin: 5px 0 0;
+     padding: 1px 5px 1px;
+     border: 1px solid #6b89d4;
+     -moz-border-radius: 0.3em;
+     background: #e6edff;
+   }
+   .titlepage
+   {
+     text-align: center;
+   }
+   .warning 
+   {
+     padding: 5px;
+     border: 1px solid #ff0011;
+     -moz-border-radius: 0.3em;
+     background: #ffbbbb;
+   }
+   .warning .title { margin: 0px 0px 5px 0px; }
+   .warning p { margin: 1px; }
+   .note 
+   {
+     padding: 1px 5px 1px;
+     border: 1px solid #84c43b;
+     -moz-border-radius: 0.3em;
+     background: #d7e9a7;
+   }
+   .note .title { margin: 0px 0px 5px 0px; }
+   .note p { margin: 1px; }
+  --></style></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="Introduction"></a>Chapter 1. First steps</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="ch01.html#idp53233664">1.1. Why is virtualization useful?</a></span></dt><dt><span class="sect1"><a href="ch01.html#virtintro">1.2. Some terminology</a></span></dt><dt><span class="sect1"><a href="ch01.html#features-overview">1.3. Features overview</a></span></dt><dt><span class="sect1"><a href="ch01.html#hostossupport">1.4. Supported host operating systems</a></span></dt><dt><span class="sect1"><a href="ch01.html#intro-installing">1.5. Installing VirtualBox and extension packs</a></span></dt><dt><span class="sect1"><a href="ch01.html#idp52043488">1.6. Starting VirtualBox</a></span></dt><dt><span class="sect1"><a href="ch01.html#gui-createvm">1.7. Creating your first virtual machine</a></span></dt><dt><span class="sect1"><a href="ch01.html#idp52097392">1.8. Running your virtual machine</a></span></dt><dd><dl><dt><span class="sect2"><a href="ch01.html#idp52104384">1.8.1. Starting a new VM for the first time</a></span></dt><dt><span class="sect2"><a href="ch01.html#keyb_mouse_normal">1.8.2. Capturing and releasing keyboard and mouse</a></span></dt><dt><span class="sect2"><a href="ch01.html#specialcharacters">1.8.3. Typing special characters</a></span></dt><dt><span class="sect2"><a href="ch01.html#idp52152624">1.8.4. Changing removable media</a></span></dt><dt><span class="sect2"><a href="ch01.html#intro-resize-window">1.8.5. Resizing the machine's window</a></span></dt><dt><span class="sect2"><a href="ch01.html#idp52167888">1.8.6. Saving the state of the machine</a></span></dt></dl></dd><dt><span class="sect1"><a href="ch01.html#gui-vmgroups">1.9. Using VM groups</a></span></dt><dt><span class="sect1"><a href="ch01.html#snapshots">1.10. Snapshots</a></span></dt><dd><dl><dt><span class="sect2"><a href="ch01.html#idp55591632">1.10.1. Taking, restoring and deleting snapshots</a></span></dt><dt><span class="sect2"><a href="ch01.html#idp55615024">1.10.2. Snapshot contents</a></span></dt></dl></dd><dt><span class="sect1"><a href="ch01.html#configbasics">1.11. Virtual machine configuration</a></span></dt><dt><span class="sect1"><a href="ch01.html#idp55629568">1.12. Removing virtual machines</a></span></dt><dt><span class="sect1"><a href="ch01.html#clone">1.13. Cloning virtual machines</a></span></dt><dt><span class="sect1"><a href="ch01.html#ovf">1.14. Importing and exporting virtual machines</a></span></dt><dt><span class="sect1"><a href="ch01.html#globalsettings">1.15. Global Settings</a></span></dt><dt><span class="sect1"><a href="ch01.html#frontends">1.16. Alternative front-ends</a></span></dt></dl></div><p>Welcome to Oracle VM VirtualBox!</p><p>VirtualBox is a cross-platform virtualization application. What does
+  that mean? For one thing, it installs on your existing Intel or AMD-based
+  computers, whether they are running Windows, Mac, Linux or Solaris operating
+  systems. Secondly, it extends the capabilities of your existing computer so
+  that it can run multiple operating systems (inside multiple virtual
+  machines) at the same time. So, for example, you can run Windows and Linux
+  on your Mac, run Windows Server 2008 on your Linux server, run Linux on your
+  Windows PC, and so on, all alongside your existing applications. You can
+  install and run as many virtual machines as you like -- the only practical
+  limits are disk space and memory.</p><p>VirtualBox is deceptively simple yet also very powerful. It can run
+  everywhere from small embedded systems or desktop class machines all the way
+  up to datacenter deployments and even Cloud environments.</p><p>The following screenshot shows you how VirtualBox, installed on a Mac
+  computer, is running Windows 7 in a virtual machine window:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="496"><tr><td align="center"><img src="images/vm-vista-running.png" align="middle" width="496"></td></tr></table></div><p>In this User Manual, we'll begin simply with a quick introduction to
+  virtualization and how to get your first virtual machine running with the
+  easy-to-use VirtualBox graphical user interface. Subsequent chapters will go
+  into much more detail covering more powerful tools and features, but
+  fortunately, it is not necessary to read the entire User Manual before you
+  can use VirtualBox.</p><p>You can find a summary of VirtualBox's capabilities in <a href="ch01.html#features-overview" title="1.3. Features overview">Section 1.3, &#8220;Features overview&#8221;</a>. For existing VirtualBox users who just want
+  to see what's new in this release, there is a detailed list in <a href="ch15.html" title="Chapter 15. Change log">Chapter 15, <i>Change log</i></a>.</p><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53233664"></a>1.1. Why is virtualization useful?</h2></div></div></div><p>The techniques and features that VirtualBox provides are useful for
+    several scenarios:</p><div class="itemizedlist"><ul type="disc"><li><p><span class="bold"><strong>Running multiple operating systems
+        simultaneously.</strong></span> VirtualBox allows you to run more than one
+        operating system at a time. This way, you can run software written for
+        one operating system on another (for example, Windows software on
+        Linux or a Mac) without having to reboot to use it. Since you can
+        configure what kinds of "virtual" hardware should be presented to each
+        such operating system, you can install an old operating system such as
+        DOS or OS/2 even if your real computer's hardware is no longer
+        supported by that operating system.</p></li><li><p><span class="bold"><strong>Easier software installations.</strong></span>
+        Software vendors can use virtual machines to ship entire software
+        configurations. For example, installing a complete mail server
+        solution on a real machine can be a tedious task. With VirtualBox,
+        such a complex setup (then often called an "appliance") can be packed
+        into a virtual machine. Installing and running a mail server becomes
+        as easy as importing such an appliance into VirtualBox.</p></li><li><p><span class="bold"><strong>Testing and disaster recovery.</strong></span>
+        Once installed, a virtual machine and its virtual hard disks can be
+        considered a "container" that can be arbitrarily frozen, woken up,
+        copied, backed up, and transported between hosts.</p><p>On top of that, with the use of another VirtualBox feature
+        called "snapshots", one can save a particular state of a virtual
+        machine and revert back to that state, if necessary. This way, one can
+        freely experiment with a computing environment. If something goes
+        wrong (e.g. after installing misbehaving software or infecting the
+        guest with a virus), one can easily switch back to a previous snapshot
+        and avoid the need of frequent backups and restores.</p><p>Any number of snapshots can be created, allowing you to travel
+        back and forward in virtual machine time. You can delete snapshots
+        while a VM is running to reclaim disk space.</p></li><li><p><span class="bold"><strong>Infrastructure consolidation.</strong></span>
+        Virtualization can significantly reduce hardware and electricity
+        costs. Most of the time, computers today only use a fraction of their
+        potential power and run with low average system loads. A lot of
+        hardware resources as well as electricity is thereby wasted. So,
+        instead of running many such physical computers that are only
+        partially used, one can pack many virtual machines onto a few powerful
+        hosts and balance the loads between them.</p></li></ul></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="virtintro"></a>1.2. Some terminology</h2></div></div></div><p>When dealing with virtualization (and also for understanding the
+    following chapters of this documentation), it helps to acquaint oneself
+    with a bit of crucial terminology, especially the following terms:</p><div class="glosslist"><dl><dt>Host operating system (host OS).</dt><dd><p>This is the operating system of the physical computer on which
+          VirtualBox was installed. There are versions of VirtualBox for
+          Windows, Mac OS X, Linux and Solaris hosts; for details, please see
+          <a href="ch01.html#hostossupport" title="1.4. Supported host operating systems">Section 1.4, &#8220;Supported host operating systems&#8221;</a>.</p><p>Most of the time, this User Manual discusses all VirtualBox
+          versions together. There may be platform-specific differences which
+          we will point out where appropriate.</p></dd><dt>Guest operating system (guest OS).</dt><dd><p>This is the operating system that is running inside the
+          virtual machine. Theoretically, VirtualBox can run any x86 operating
+          system (DOS, Windows, OS/2, FreeBSD, OpenBSD), but to achieve
+          near-native performance of the guest code on your machine, we had to
+          go through a lot of optimizations that are specific to certain
+          operating systems. So while your favorite operating system
+          <span class="emphasis"><em>may</em></span> run as a guest, we officially support and
+          optimize for a select few (which, however, include the most common
+          ones).</p><p>See <a href="ch03.html#guestossupport" title="3.1. Supported guest operating systems">Section 3.1, &#8220;Supported guest operating systems&#8221;</a> for details.</p></dd><dt>Virtual machine (VM).</dt><dd><p>This is the special environment that VirtualBox creates for
+          your guest operating system while it is running. In other words, you
+          run your guest operating system "in" a VM. Normally, a VM will be
+          shown as a window on your computer's desktop, but depending on which
+          of the various frontends of VirtualBox you use, it can be displayed
+          in full screen mode or remotely on another computer.</p><p>In a more abstract way, internally, VirtualBox thinks of a VM
+          as a set of parameters that determine its behavior. They include
+          hardware settings (how much memory the VM should have, what hard
+          disks VirtualBox should virtualize through which container files,
+          what CDs are mounted etc.) as well as state information (whether the
+          VM is currently running, saved, its snapshots etc.). These settings
+          are mirrored in the VirtualBox Manager window as well as the
+          <code class="computeroutput">VBoxManage</code> command line program;
+          see <a href="ch08.html" title="Chapter 8. VBoxManage">Chapter 8, <i>VBoxManage</i></a>. In other words, a VM is also what
+          you can see in its settings dialog.</p></dd><dt>Guest Additions.</dt><dd><p>This refers to special software packages which are shipped
+          with VirtualBox but designed to be installed
+          <span class="emphasis"><em>inside</em></span> a VM to improve performance of the guest
+          OS and to add extra features. This is described in detail in <a href="ch04.html" title="Chapter 4. Guest Additions">Chapter 4, <i>Guest Additions</i></a>.</p></dd></dl></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="features-overview"></a>1.3. Features overview</h2></div></div></div><p>Here's a brief outline of VirtualBox's main features:</p><div class="itemizedlist"><ul type="disc"><li><p><span class="bold"><strong>Portability.</strong></span> VirtualBox runs on
+        a large number of 32-bit and 64-bit host operating systems (again, see
+        <a href="ch01.html#hostossupport" title="1.4. Supported host operating systems">Section 1.4, &#8220;Supported host operating systems&#8221;</a> for details).</p><p>VirtualBox is a so-called "hosted" hypervisor (sometimes
+        referred to as a "type 2" hypervisor). Whereas a "bare-metal" or "type
+        1" hypervisor would run directly on the hardware, VirtualBox requires
+        an existing operating system to be installed. It can thus run
+        alongside existing applications on that host.</p><p>To a very large degree, VirtualBox is functionally identical on
+        all of the host platforms, and the same file and image formats are
+        used. This allows you to run virtual machines created on one host on
+        another host with a different host operating system; for example, you
+        can create a virtual machine on Windows and then run it under
+        Linux.</p><p>In addition, virtual machines can easily be imported and
+        exported using the Open Virtualization Format (OVF, see <a href="ch01.html#ovf" title="1.14. Importing and exporting virtual machines">Section 1.14, &#8220;Importing and exporting virtual machines&#8221;</a>), an industry standard created for this purpose. You
+        can even import OVFs that were created with a different virtualization
+        software.</p></li><li><p><span class="bold"><strong>No hardware virtualization
+        required.</strong></span> For many scenarios, VirtualBox does not require
+        the processor features built into newer hardware like Intel VT-x or
+        AMD-V. As opposed to many other virtualization solutions, you can
+        therefore use VirtualBox even on older hardware where these features
+        are not present. The technical details are explained in <a href="ch10.html#hwvirt" title="10.3. Hardware vs. software virtualization">Section 10.3, &#8220;Hardware vs. software virtualization&#8221;</a>.</p></li><li><p><span class="bold"><strong>Guest Additions: shared folders, seamless
+        windows, 3D virtualization.</strong></span> The VirtualBox Guest Additions
+        are software packages which can be installed
+        <span class="emphasis"><em>inside</em></span> of supported guest systems to improve
+        their performance and to provide additional integration and
+        communication with the host system. After installing the Guest
+        Additions, a virtual machine will support automatic adjustment of
+        video resolutions, seamless windows, accelerated 3D graphics and more.
+        The Guest Additions are described in detail in <a href="ch04.html" title="Chapter 4. Guest Additions">Chapter 4, <i>Guest Additions</i></a>.</p><p>In particular, Guest Additions provide for "shared folders",
+        which let you access files from the host system from within a guest
+        machine. Shared folders are described in <a href="ch04.html#sharedfolders" title="4.3. Shared folders">Section 4.3, &#8220;Shared folders&#8221;</a>.</p></li><li><p><span class="bold"><strong>Great hardware support.</strong></span> Among
+        others, VirtualBox supports:</p><div class="itemizedlist"><ul type="circle"><li><p><span class="bold"><strong>Guest multiprocessing
+            (SMP).</strong></span> VirtualBox can present up to 32 virtual CPUs to
+            each virtual machine, irrespective of how many CPU cores are
+            physically present on your host.</p></li><li><p><span class="bold"><strong>USB device support.</strong></span>
+            VirtualBox implements a virtual USB controller and allows you to
+            connect arbitrary USB devices to your virtual machines without
+            having to install device-specific drivers on the host. USB support
+            is not limited to certain device categories. For details, see
+            <a href="ch03.html#settings-usb" title="3.10.1. USB settings">Section 3.10.1, &#8220;USB settings&#8221;</a>.</p></li><li><p><span class="bold"><strong>Hardware compatibility.</strong></span>
+            VirtualBox virtualizes a vast array of virtual devices, among them
+            many devices that are typically provided by other virtualization
+            platforms. That includes IDE, SCSI and SATA hard disk controllers,
+            several virtual network cards and sound cards, virtual serial and
+            parallel ports and an Input/Output Advanced Programmable Interrupt
+            Controller (I/O APIC), which is found in many modern PC systems.
+            This eases cloning of PC images from real machines and importing
+            of third-party virtual machines into VirtualBox.</p></li><li><p><span class="bold"><strong>Full ACPI support.</strong></span> The
+            Advanced Configuration and Power Interface (ACPI) is fully
+            supported by VirtualBox. This eases cloning of PC images from real
+            machines or third-party virtual machines into VirtualBox. With its
+            unique <span class="bold"><strong>ACPI power status support,</strong></span>
+            VirtualBox can even report to ACPI-aware guest operating systems
+            the power status of the host. For mobile systems running on
+            battery, the guest can thus enable energy saving and notify the
+            user of the remaining power (e.g. in full screen modes).</p></li><li><p><span class="bold"><strong>Multiscreen resolutions.</strong></span>
+            VirtualBox virtual machines support screen resolutions many times
+            that of a physical screen, allowing them to be spread over a large
+            number of screens attached to the host system.</p></li><li><p><span class="bold"><strong>Built-in iSCSI support.</strong></span>
+            This unique feature allows you to connect a virtual machine
+            directly to an iSCSI storage server without going through the host
+            system. The VM accesses the iSCSI target directly without the
+            extra overhead that is required for virtualizing hard disks in
+            container files. For details, see <a href="ch05.html#storage-iscsi" title="5.10. iSCSI servers">Section 5.10, &#8220;iSCSI servers&#8221;</a>.</p></li><li><p><span class="bold"><strong>PXE Network boot.</strong></span> The
+            integrated virtual network cards of VirtualBox fully support
+            remote booting via the Preboot Execution Environment (PXE).</p></li></ul></div></li><li><p><span class="bold"><strong>Multigeneration branched
+        snapshots.</strong></span> VirtualBox can save arbitrary snapshots of the
+        state of the virtual machine. You can go back in time and revert the
+        virtual machine to any such snapshot and start an alternative VM
+        configuration from there, effectively creating a whole snapshot tree.
+        For details, see <a href="ch01.html#snapshots" title="1.10. Snapshots">Section 1.10, &#8220;Snapshots&#8221;</a>. You can create and
+        delete snapshots while the virtual machine is running.</p></li><li><p><span class="bold"><strong>VM groups.</strong></span> VirtualBox provides a
+        groups feature that enables the user to organize virtual machines
+        collectively, as well as individually. In addition to basic groups, it
+        is also possible for any VM to be in more than one group, and for
+        groups to be nested in a hierarchy -- i.e. groups of groups. In
+        general, the operations that can be performed on groups are the same as
+        those that can be applied to individual VMs i.e. Start, Pause, Reset,
+        Close (Save state, Send Shutdown, Poweroff), Discard Saved State, Show
+        in fileSystem, Sort.</p></li><li><p><span class="bold"><strong>Clean architecture; unprecedented
+        modularity.</strong></span> VirtualBox has an extremely modular design with
+        well-defined internal programming interfaces and a clean separation of
+        client and server code. This makes it easy to control it from several
+        interfaces at once: for example, you can start a VM simply by clicking
+        on a button in the VirtualBox graphical user interface and then
+        control that machine from the command line, or even remotely. See
+        <a href="ch01.html#frontends" title="1.16. Alternative front-ends">Section 1.16, &#8220;Alternative front-ends&#8221;</a> for details.</p><p>Due to its modular architecture, VirtualBox can also expose its
+        full functionality and configurability through a comprehensive
+        <span class="bold"><strong>software development kit (SDK),</strong></span> which
+        allows for integrating every aspect of VirtualBox with other software
+        systems. Please see <a href="ch11.html" title="Chapter 11. VirtualBox programming interfaces">Chapter 11, <i>VirtualBox programming interfaces</i></a> for
+        details.</p></li><li><p><span class="bold"><strong>Remote machine display.</strong></span> The
+        VirtualBox Remote Desktop Extension (VRDE) allows for high-performance
+        remote access to any running virtual machine. This extension supports
+        the Remote Desktop Protocol (RDP) originally built into Microsoft
+        Windows, with special additions for full client USB support.</p><p>The VRDE does not rely on the RDP server that is built into
+        Microsoft Windows; instead, it is plugged directly into the
+        virtualization layer. As a result, it works with guest operating
+        systems other than Windows (even in text mode) and does not require
+        application support in the virtual machine either. The VRDE is
+        described in detail in <a href="ch07.html#vrde" title="7.1. Remote display (VRDP support)">Section 7.1, &#8220;Remote display (VRDP support)&#8221;</a>.</p><p>On top of this special capacity, VirtualBox offers you more
+        unique features:</p><div class="itemizedlist"><ul type="circle"><li><p><span class="bold"><strong>Extensible RDP
+              authentication.</strong></span> VirtualBox already supports Winlogon
+              on Windows and PAM on Linux for RDP authentication. In addition,
+              it includes an easy-to-use SDK which allows you to create
+              arbitrary interfaces for other methods of authentication; see
+              <a href="ch07.html#vbox-auth" title="7.1.5. RDP authentication">Section 7.1.5, &#8220;RDP authentication&#8221;</a> for details.</p></li><li><p><span class="bold"><strong>USB over RDP.</strong></span> Via RDP
+              virtual channel support, VirtualBox also allows you to connect
+              arbitrary USB devices locally to a virtual machine which is
+              running remotely on a VirtualBox RDP server; see <a href="ch07.html#usb-over-rdp" title="7.1.4. Remote USB">Section 7.1.4, &#8220;Remote USB&#8221;</a> for details.</p></li></ul></div></li></ul></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="hostossupport"></a>1.4. Supported host operating systems</h2></div></div></div><p>Currently, VirtualBox runs on the following host operating
+    systems:</p><div class="itemizedlist"><ul type="disc"><li><p><span class="bold"><strong>Windows</strong></span> hosts:</p><div class="itemizedlist"><ul type="circle"><li><p>Windows XP, all service packs (32-bit)</p></li><li><p>Windows Server 2003 (32-bit)</p></li><li><p>Windows Vista (32-bit and 64-bit<sup>[<a name="idp51996096" href="#ftn.idp51996096">1</a>]</sup>).</p></li><li><p>Windows Server 2008 (32-bit and 64-bit)</p></li><li><p>Windows 7 (32-bit and 64-bit)</p></li><li><p>Windows 8 (32-bit and 64-bit)</p></li><li><p>Windows Server 2012 (64-bit)</p></li></ul></div></li><li><p><span class="bold"><strong>Mac OS X</strong></span> hosts:<sup>[<a name="idp52002400" href="#ftn.idp52002400">2</a>]</sup></p><div class="itemizedlist"><ul type="circle"><li><p>10.6 (Snow Leopard, 32-bit and 64-bit)</p></li><li><p>10.7 (Lion, 32-bit and 64-bit)</p></li><li><p>10.8 (Mountain Lion, 64-bit)</p></li><li><p>10.9 (Mavericks, 64-bit)</p></li></ul></div><p>Intel hardware is required; please see <a href="ch14.html" title="Chapter 14. Known limitations">Chapter 14, <i>Known limitations</i></a> also.</p></li><li><p><span class="bold"><strong>Linux</strong></span> hosts (32-bit and
+        64-bit<sup>[<a name="idp52009888" href="#ftn.idp52009888">3</a>]</sup>). Among others, this includes:</p><div class="itemizedlist"><ul type="circle"><li><p>10.04 ("Lucid Lynx"), 10.10 ("Maverick Meerkat),
+              11.04 ("Natty Narwhal"), 11.10 ("Oneiric Oncelot"),
+              12.04 ("Precise Pangolin"), 12.10 ("Quantal Quetzal"),
+              13.04 ("Raring Ringtail"), 13.10 ("Saucy Salamander")</p></li><li><p>Debian GNU/Linux 6.0 ("squeeze") and 7.0 ("wheezy")</p></li><li><p>Oracle Enterprise Linux 5, Oracle Linux 6</p></li><li><p>Redhat Enterprise Linux 5 and 6</p></li><li><p>Fedora Core 6 to 19</p></li><li><p>Gentoo Linux</p></li><li><p>openSUSE 11.0, 11.1, 11.2, 11.3, 11.4, 12.1, 12.2</p></li><li><p>Mandriva 2010 and 2011</p></li></ul></div><p>It should be possible to use VirtualBox on most systems based on
+        Linux kernel 2.6 or 3.x using either the VirtualBox installer or by doing a
+        manual installation; see <a href="ch02.html#install-linux-host" title="2.3. Installing on Linux hosts">Section 2.3, &#8220;Installing on Linux hosts&#8221;</a>. However,
+        the formally tested and supported Linux distributions are those for
+        which we offer a dedicated package.</p><p>Note that starting with VirtualBox 2.1, Linux 2.4-based host
+        operating systems are no longer supported.</p></li><li><p><span class="bold"><strong>Solaris</strong></span> hosts (64-bit only) are
+        supported with the restrictions listed in <a href="ch14.html" title="Chapter 14. Known limitations">Chapter 14, <i>Known limitations</i></a>:</p><div class="itemizedlist"><ul type="circle"><li><p>Solaris 11 including Solaris 11 Express</p></li><li><p>Solaris 10 (u8 and higher)</p></li></ul></div></li></ul></div><p>Note that the above list is informal. Oracle support for customers
+    who have a support contract is limited to a subset of the listed host
+    operating systems. Also, any feature which is marked as  <span class="bold"><strong>experimental</strong></span> is not supported. Feedback and
+    suggestions about such features are welcome.</p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="intro-installing"></a>1.5. Installing VirtualBox and extension packs</h2></div></div></div><p>VirtualBox comes in many different packages, and installation
+    depends on your host operating system. If you have installed software
+    before, installation should be straightforward: on each host platform,
+    VirtualBox uses the installation method that is most common and easy to
+    use. If you run into trouble or have special requirements, please refer to
+    <a href="ch02.html" title="Chapter 2. Installation details">Chapter 2, <i>Installation details</i></a> for details about the various installation
+    methods.</p><p>Starting with version 4.0, VirtualBox is split into several
+    components.</p><div class="orderedlist"><ol type="1"><li><p>The base package consists of all open-source components and is
+          licensed under the GNU General Public License V2.</p></li><li><p>Additional extension packs can be downloaded which extend the
+          functionality of the VirtualBox base package. Currently, Oracle
+          provides the one extension pack, which can be found at <a href="http://www.virtualbox.org" target="_top">http://www.virtualbox.org</a>
+          and provides the following added functionality:</p><div class="orderedlist"><ol type="a"><li><p>The virtual USB 2.0 (EHCI) device; see <a href="ch03.html#settings-usb" title="3.10.1. USB settings">Section 3.10.1, &#8220;USB settings&#8221;</a>.</p></li><li><p>VirtualBox Remote Desktop Protocol (VRDP) support; see
+                <a href="ch07.html#vrde" title="7.1. Remote display (VRDP support)">Section 7.1, &#8220;Remote display (VRDP support)&#8221;</a>.</p></li><li><p>Host webcam passthrough; see chapter <a href="ch09.html#webcam-passthrough" title="9.7.1. Using a host webcam in the guest">Section 9.7.1, &#8220;Using a host webcam in the guest&#8221;</a>.</p></li><li><p>Intel PXE boot ROM.</p></li><li><p>Experimental support for PCI passthrough on Linux hosts;
+                  see <a href="ch09.html#pcipassthrough" title="9.6. PCI passthrough">Section 9.6, &#8220;PCI passthrough&#8221;</a>.</p></li></ol></div><p>VirtualBox extension packages have a
+          <code class="computeroutput">.vbox-extpack</code> file name extension.
+          To install an extension, simply double-click on the package file
+          and a Network Operations Manager window will appear, guiding you
+          through the required steps.</p><p>To view the extension packs that are currently installed,
+          please start the VirtualBox Manager (see the next section). From the
+          "File" menu, please select "Preferences". In the window that shows
+          up, go to the "Extensions" category which shows you the extensions
+          which are currently installed and allows you to remove a package or
+          add a new one.</p><p>Alternatively you can use VBoxManage on the command line: see
+          <a href="ch08.html#vboxmanage-extpack" title="8.36. VBoxManage extpack">Section 8.36, &#8220;VBoxManage extpack&#8221;</a> for details.</p></li></ol></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52043488"></a>1.6. Starting VirtualBox</h2></div></div></div><p>After installation, you can start VirtualBox as
+    follows:</p><div class="itemizedlist"><ul type="disc"><li><p>On a Windows host, in the standard "Programs" menu, click on
+          the item in the "VirtualBox" group. On Vista or Windows 7, you can
+          also type "VirtualBox" in the search box of the "Start" menu.</p></li><li><p>On a Mac OS X host, in the Finder, double-click on the
+          "VirtualBox" item in the "Applications" folder. (You may want to
+          drag this item onto your Dock.)</p></li><li><p>On a Linux or Solaris host, depending on your desktop
+          environment, a "VirtualBox" item may have been placed in either the
+          "System" or "System Tools" group of your "Applications" menu.
+          Alternatively, you can type
+          <code class="computeroutput">VirtualBox</code> in a terminal.</p></li></ul></div><p>When you start VirtualBox for the first time, a window like the
+    following should come up:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="354"><tr><td align="center"><img src="images/virtualbox-main-empty.png" align="middle" width="354"></td></tr></table></div><p>This window is called the <span class="bold"><strong>"VirtualBox Manager".</strong></span> On the left, you can see a
+    pane that will later list all your virtual machines. Since you have not
+    created any, the list is empty. A row of buttons above it allows you to
+    create new VMs and work on existing VMs, once you have some. The pane on
+    the right displays the properties of the virtual machine currently
+    selected, if any. Again, since you don't have any machines yet, the pane
+    displays a welcome message.</p><p>To give you an idea what VirtualBox might look like later, after you
+    have created many machines, here's another example:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="354"><tr><td align="center"><img src="images/virtualbox-main.png" align="middle" width="354"></td></tr></table></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="gui-createvm"></a>1.7. Creating your first virtual machine</h2></div></div></div><p>Click on the "New" button at the top of the VirtualBox Manager
+    window. A wizard will pop up to guide you through setting up a new virtual
+    machine (VM):</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="354"><tr><td align="center"><img src="images/create-vm-1.png" align="middle" width="354"></td></tr></table></div><p>On the following pages, the wizard will ask you for the
+    bare minimum of information that is needed to create a VM, in
+    particular:</p><div class="orderedlist"><ol type="1"><li><p>The <span class="bold"><strong>VM name</strong></span> will later be
+          shown in the VM list of the VirtualBox Manager window, and it will
+          be used for the VM's files on disk. Even though any name could be
+          used, keep in mind that once you have created a few VMs, you will
+          appreciate if you have given your VMs rather informative names; "My
+          VM" would thus be less useful than "Windows XP SP2 with
+          OpenOffice".</p></li><li><p>For <span class="bold"><strong>"Operating System Type",</strong></span>
+          select the operating system that you want to install later. The
+          supported operating systems are grouped; if you want to install
+          something very unusual that is not listed, select "Other". Depending
+          on your selection, VirtualBox will enable or disable certain VM
+          settings that your guest operating system may require. This is
+          particularly important for 64-bit guests (see <a href="ch03.html#intro-64bitguests" title="3.1.2. 64-bit guests">Section 3.1.2, &#8220;64-bit guests&#8221;</a>). It is therefore recommended to
+          always set it to the correct value.</p></li><li><p>On the next page, select the <span class="bold"><strong>memory
+          (RAM)</strong></span> that VirtualBox should allocate every time the
+          virtual machine is started. The amount of memory given here will be
+          taken away from your host machine and presented to the guest
+          operating system, which will report this size as the (virtual)
+          computer's installed RAM.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Choose this setting carefully! The memory you give to the
+              VM will not be available to your host OS while the VM is
+              running, so do not specify more than you can spare. For example,
+              if your host machine has 1 GB of RAM and you enter 512 MB as the
+              amount of RAM for a particular virtual machine, while that VM is
+              running, you will only have 512 MB left for all the other
+              software on your host. If you run two VMs at the same time, even
+              more memory will be allocated for the second VM (which may not
+              even be able to start if that memory is not available). On the
+              other hand, you should specify as much as your guest OS (and
+              your applications) will require to run properly.</p></div><p>A Windows XP guest will require at least a few hundred MB RAM
+          to run properly, and Windows Vista will even refuse to install with
+          less than 512 MB. Of course, if you want to run graphics-intensive
+          applications in your VM, you may require even more RAM.</p><p>So, as a rule of thumb, if you have 1 GB of RAM or more in
+          your host computer, it is usually safe to allocate 512 MB to each
+          VM. But, in any case, make sure you always have at least 256 to 512
+          MB of RAM left on your host operating system. Otherwise you may
+          cause your host OS to excessively swap out memory to your hard disk,
+          effectively bringing your host system to a standstill.</p><p>As with the other settings, you can change this setting later,
+          after you have created the VM.</p></li><li><p>Next, you must specify a <span class="bold"><strong>virtual hard
+          disk</strong></span> for your VM.</p><p>There are many and potentially complicated ways in which
+          VirtualBox can provide hard disk space to a VM (see <a href="ch05.html" title="Chapter 5. Virtual storage">Chapter 5, <i>Virtual storage</i></a> for details), but the most common way is to use
+          a large image file on your "real" hard disk, whose contents
+          VirtualBox presents to your VM as if it were a complete hard disk.
+          This file represents an entire hard disk then, so you can even copy
+          it to another host and use it with another VirtualBox
+          installation.</p><p>The wizard shows you the following window:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="354"><tr><td align="center"><img src="images/create-vm-2.png" align="middle" width="354"></td></tr></table></div><p>Here you have the following options:</p><div class="itemizedlist"><ul type="disc"><li><p>To create a new, empty virtual hard disk, press the
+                <span class="bold"><strong>"New"</strong></span> button.</p></li><li><p>You can pick an <span class="bold"><strong>existing</strong></span> disk image file.</p><p>The <span class="bold"><strong>drop-down list</strong></span>
+                presented in the window contains all disk images which are
+                currently remembered by VirtualBox, probably because they are
+                currently attached to a virtual machine (or have been in the
+                past).</p><p>Alternatively, you can click on the small <span class="bold"><strong>folder button</strong></span> next to the drop-down
+                list to bring up a standard file dialog, which allows you to
+                pick any disk image file on your host disk.</p></li></ul></div><p>Most probably, if you are using VirtualBox for the
+          first time, you will want to create a new disk image. Hence, press
+          the "New" button.</p><p>This brings up another window, the <span class="bold"><strong>"Create New Virtual Disk Wizard",</strong></span> which helps
+          you create a new disk image file in the new virtual machine's
+          folder.</p><p>VirtualBox supports two types of image files:</p><div class="itemizedlist"><ul type="disc"><li><p>A <span class="bold"><strong>dynamically allocated
+                file</strong></span> will only grow in size when the guest actually
+                stores data on its virtual hard disk. It will therefore
+                initially be small on the host hard drive and only later grow
+                to the size specified as it is filled with data.</p></li><li><p>A <span class="bold"><strong>fixed-size file</strong></span> will
+                immediately occupy the file specified, even if only a fraction
+                of the virtual hard disk space is actually in use. While
+                occupying much more space, a fixed-size file incurs less
+                overhead and is therefore slightly faster than a dynamically
+                allocated file.</p></li></ul></div><p>For details about the differences, please refer to <a href="ch05.html#vdidetails" title="5.2. Disk image files (VDI, VMDK, VHD, HDD)">Section 5.2, &#8220;Disk image files (VDI, VMDK, VHD, HDD)&#8221;</a>.</p><p>To prevent your physical hard disk from running full,
+          VirtualBox limits the size of the image file. Still, it needs to be
+          large enough to hold the contents of your operating system and the
+          applications you want to install -- for a modern Windows or Linux
+          guest, you will probably need several gigabytes for any serious
+          use:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="354"><tr><td align="center"><img src="images/create-vdi-1.png" align="middle" width="354"></td></tr></table></div><p>After having selected or created your image file, again press
+          <span class="bold"><strong>"Next"</strong></span> to go to the next
+          page.</p></li><li><p>After clicking on <span class="bold"><strong>"Finish"</strong></span>,
+          your new virtual machine will be created. You will then see it in
+          the list on the left side of the Manager window, with the name you
+          entered initially.</p></li></ol></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>After becoming familiar with the use of wizards, consider using
+      the Expert Mode available in some wizards. Where available, this is
+      selectable using a button, and speeds up user processes using
+      wizards.</p></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52097392"></a>1.8. Running your virtual machine</h2></div></div></div><p>To start a virtual machine, you have several options:</p><div class="itemizedlist"><ul type="disc"><li><p>Double-click on its entry in the list within the Manager
+          window or</p></li><li><p>select its entry in the list in the Manager window it and
+          press the "Start" button at the top or</p></li><li><p>for virtual machines created with VirtualBox 4.0 or later,
+          navigate to the "VirtualBox VMs" folder in your system user's home
+          directory, find the subdirectory of the machine you want to start
+          and double-click on the machine settings file (with a
+          <code class="computeroutput">.vbox</code> file extension).</p></li></ul></div><p>This opens up a new window, and the virtual machine which you
+    selected will boot up. Everything which would normally be seen on the
+    virtual system's monitor is shown in the window, as can be seen with the
+    image in <a href="ch01.html#virtintro" title="1.2. Some terminology">Section 1.2, &#8220;Some terminology&#8221;</a>.</p><p>In general, you can use the virtual machine much like you would use
+    a real computer. There are couple of points worth mentioning
+    however.</p><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="idp52104384"></a>1.8.1. Starting a new VM for the first time</h3></div></div></div><p>When a VM gets started for the first time, another wizard -- the
+      <span class="bold"><strong>"First Start Wizard"</strong></span> -- will pop up to
+      help you select an <span class="bold"><strong>installation medium</strong></span>.
+      Since the VM is created empty, it would otherwise behave just like a
+      real computer with no operating system installed: it will do nothing and
+      display an error message that no bootable operating system was
+      found.</p><p>For this reason, the wizard helps you select a medium to install
+      an operating system from.</p><div class="itemizedlist"><ul type="disc"><li><p>If you have physical CD or DVD media from which you want to
+          install your guest operating system (e.g. in the case of a Windows
+          installation CD or DVD), put the media into your host's CD or DVD
+          drive.</p><p>Then, in the wizard's drop-down list of installation media,
+          select <span class="bold"><strong>"Host drive"</strong></span> with the
+          correct drive letter (or, in the case of a Linux host, device file).
+          This will allow your VM to access the media in your host drive, and
+          you can proceed to install from there.</p></li><li><p>If you have downloaded installation media from the Internet in
+          the form of an ISO image file (most probably in the case of a Linux
+          distribution), you would normally burn this file to an empty CD or
+          DVD and proceed as just described. With VirtualBox however, you can
+          skip this step and mount the ISO file directly. VirtualBox will then
+          present this file as a CD or DVD-ROM drive to the virtual machine,
+          much like it does with virtual hard disk images.</p><p>For this case, the wizard's drop-down list contains a list of
+          installation media that were previously used with VirtualBox.</p><p>If your medium is not in the list (especially if you are using
+          VirtualBox for the first time), select the small folder icon next to
+          the drop-down list to bring up a standard file dialog, with which
+          you can pick the image file on your host disks.</p></li></ul></div><p>In both cases, after making the choices in the wizard, you will be
+      able to install your operating system.</p></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="keyb_mouse_normal"></a>1.8.2. Capturing and releasing keyboard and mouse</h3></div></div></div><p>As of version 3.2, VirtualBox provides a virtual USB tablet device
+      to new virtual machines through which mouse events are communicated to
+      the guest operating system. As a result, if you are running a modern
+      guest operating system that can handle such devices, mouse support may
+      work out of the box without the mouse being "captured" as described
+      below; see <a href="ch03.html#settings-motherboard" title='3.4.1. "Motherboard" tab'>Section 3.4.1, &#8220;"Motherboard" tab&#8221;</a> for more
+      information.</p><p>Otherwise, if the virtual machine only sees standard PS/2 mouse
+      and keyboard devices, since the operating system in the virtual machine
+      does not "know" that it is not running on a real computer, it expects to
+      have exclusive control over your keyboard and mouse. This is, however,
+      not the case since, unless you are running the VM in full screen mode,
+      your VM needs to share keyboard and mouse with other applications and
+      possibly other VMs on your host.</p><p>As a result, initially after installing a guest operating system
+      and before you install the Guest Additions (we will explain this in a
+      minute), only one of the two -- your VM or the rest of your computer --
+      can "own" the keyboard and the mouse. You will see a
+      <span class="emphasis"><em>second</em></span> mouse pointer which will always be confined
+      to the limits of the VM window. Basically, you activate the VM by
+      clicking inside it.</p><p>To return ownership of keyboard and mouse to your host operating
+      system, VirtualBox reserves a special key on your keyboard for itself:
+      the <span class="bold"><strong>"host key".</strong></span> By default, this is the
+      <span class="emphasis"><em>right Control key</em></span> on your keyboard; on a Mac host,
+      the default host key is the left Command key. You can change this
+      default in the VirtualBox Global Settings, see <a href="ch01.html#globalsettings" title="1.15. Global Settings">Section 1.15, &#8220;Global Settings&#8221;</a>. In any case, the current
+      setting for the host key is always displayed <span class="emphasis"><em>at the bottom
+      right of your VM window,</em></span> should you have forgotten about
+      it:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="248"><tr><td align="center"><img src="images/vm-hostkey.png" align="middle" width="248"></td></tr></table></div><p>In detail, all this translates into the
+      following:</p><div class="itemizedlist"><ul type="disc"><li><p>Your <span class="bold"><strong>keyboard</strong></span> is owned by
+            the VM if the VM window on your host desktop has the keyboard
+            focus (and then, if you have many windows open in your guest
+            operating system as well, the window that has the focus in your
+            VM). This means that if you want to type within your VM, click on
+            the title bar of your VM window first.</p><p>To release keyboard ownership, press the Host key (as
+            explained above, typically the right Control key).</p><p>Note that while the VM owns the keyboard, some key sequences
+            (like Alt-Tab for example) will no longer be seen by the host, but
+            will go to the guest instead. After you press the host key to
+            re-enable the host keyboard, all key presses will go through the
+            host again, so that sequences like Alt-Tab will no longer reach
+            the guest.  For technical reasons it may not be possible for the
+            VM to get all keyboard input even when it does own the keyboard.
+            Examples of this are the Ctrl-Alt-Del sequence on Windows hosts
+            or single keys grabbed by other applications on X11 hosts like
+            the GNOME desktop's "Control key highlights mouse pointer"
+            functionality.</p></li><li><p>Your <span class="bold"><strong>mouse</strong></span> is owned by the
+            VM only after you have clicked in the VM window. The host mouse
+            pointer will disappear, and your mouse will drive the guest's
+            pointer instead of your normal mouse pointer.</p><p>Note that mouse ownership is independent of that of the
+            keyboard: even after you have clicked on a titlebar to be able to
+            type into the VM window, your mouse is not necessarily owned by
+            the VM yet.</p><p>To release ownership of your mouse by the VM, also press the
+            Host key.</p></li></ul></div><p>As this behavior can be inconvenient, VirtualBox provides a set of
+      tools and device drivers for guest systems called the "VirtualBox Guest
+      Additions" which make VM keyboard and mouse operation a lot more
+      seamless. Most importantly, the Additions will get rid of the second
+      "guest" mouse pointer and make your host mouse pointer work directly in
+      the guest.</p><p>This will be described later in <a href="ch04.html" title="Chapter 4. Guest Additions">Chapter 4, <i>Guest Additions</i></a>.</p></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="specialcharacters"></a>1.8.3. Typing special characters</h3></div></div></div><p>Operating systems expect certain key combinations to initiate
+      certain procedures. Some of these key combinations may be difficult to
+      enter into a virtual machine, as there are three candidates as to who
+      receives keyboard input: the host operating system, VirtualBox, or the
+      guest operating system. Who of these three receives keypresses depends
+      on a number of factors, including the key itself.</p><div class="itemizedlist"><ul type="disc"><li><p>Host operating systems reserve certain key combinations for
+          themselves. For example, it is impossible to enter the <span class="bold"><strong>Ctrl+Alt+Delete</strong></span> combination if you want to
+          reboot the guest operating system in your virtual machine, because
+          this key combination is usually hard-wired into the host OS (both
+          Windows and Linux intercept this), and pressing this key combination
+          will therefore reboot your <span class="emphasis"><em>host</em></span>.</p><p>Also, on Linux and Solaris hosts, which use the X Window
+          System, the key combination <span class="bold"><strong>Ctrl+Alt+Backspace</strong></span> normally resets the X
+          server (to restart the entire graphical user interface in case it
+          got stuck). As the X server intercepts this combination, pressing it
+          will usually restart your <span class="emphasis"><em>host</em></span> graphical user
+          interface (and kill all running programs, including VirtualBox, in
+          the process).</p><p>Third, on Linux hosts supporting virtual terminals, the key
+          combination <span class="bold"><strong>Ctrl+Alt+Fx</strong></span> (where Fx
+          is one of the function keys from F1 to F12) normally allows to
+          switch between virtual terminals. As with Ctrl+Alt+Delete, these
+          combinations are intercepted by the host operating system and
+          therefore always switch terminals on the
+          <span class="emphasis"><em>host</em></span>.</p><p>If, instead, you want to send these key combinations to the
+          <span class="emphasis"><em>guest</em></span> operating system in the virtual machine,
+          you will need to use one of the following methods:</p><div class="itemizedlist"><ul type="circle"><li><p>Use the items in the "Machine" menu of the virtual machine
+              window. There you will find "Insert Ctrl+Alt+Delete" and
+              "Ctrl+Alt+Backspace"; the latter will only have an effect with
+              Linux or Solaris guests, however.</p></li><li><p>Press special key combinations with the Host key (normally
+              the right Control key), which VirtualBox will then translate for
+              the virtual machine:</p><div class="itemizedlist"><ul type="square"><li><p><span class="bold"><strong>Host key + Del</strong></span> to
+                    send Ctrl+Alt+Del (to reboot the guest);</p></li><li><p><span class="bold"><strong>Host key +
+                    Backspace</strong></span> to send Ctrl+Alt+Backspace (to
+                    restart the graphical user interface of a Linux or Solaris
+                    guest);</p></li><li><p><span class="bold"><strong>Host key + F1</strong></span> (or
+                    other function keys) to simulate Ctrl+Alt+F1 (or other
+                    function keys, i.e. to switch between virtual terminals in
+                    a Linux guest).</p></li></ul></div></li></ul></div></li><li><p>For some other keyboard combinations such as <span class="bold"><strong>Alt-Tab</strong></span> (to switch between open windows),
+          VirtualBox allows you to configure whether these combinations will
+          affect the host or the guest, if a virtual machine currently has the
+          focus. This is a global setting for all virtual machines and can be
+          found under "File" -&gt; "Preferences" -&gt; "Input" -&gt;
+          "Auto-capture keyboard".</p></li></ul></div></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="idp52152624"></a>1.8.4. Changing removable media</h3></div></div></div><p>While a virtual machine is running, you can change removable media
+      in the "Devices" menu of the VM's window. Here you can select in detail
+      what VirtualBox presents to your VM as a CD, DVD, or floppy.</p><p>The settings are the same as would be available for the VM in the
+      "Settings" dialog of the VirtualBox main window, but since that dialog
+      is disabled while the VM is in the "running" or "saved" state, this
+      extra menu saves you from having to shut down and restart the VM every
+      time you want to change media.</p><p>Hence, in the "Devices" menu, VirtualBox allows you to attach the
+      host drive to the guest or select a floppy or DVD image using the Disk
+      Image Manager, all as described in <a href="ch01.html#configbasics" title="1.11. Virtual machine configuration">Section 1.11, &#8220;Virtual machine configuration&#8221;</a>.</p></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="intro-resize-window"></a>1.8.5. Resizing the machine's window</h3></div></div></div><p>You can resize the virtual machine's window when it is running. In
+      that case, one of three things will happen:</p><div class="orderedlist"><ol type="1"><li><p>If you have <span class="bold"><strong>"scale mode"</strong></span>
+            enabled, then the virtual machine's screen will be scaled to the
+            size of the window. This can be useful if you have many machines
+            running and want to have a look at one of them while it is running
+            in the background. Alternatively, it might be useful to enlarge a
+            window if the VM's output screen is very small, for example
+            because you are running an old operating system in it.</p><p>To enable scale mode, press the <span class="bold"><strong>host
+            key + C</strong></span>, or select "Scale mode" from the "Machine" menu
+            in the VM window. To leave scale mode, press the host key + C
+            again.</p><p>The aspect ratio of the guest screen is preserved when
+            resizing the window. To ignore the aspect ratio, press Shift
+            during the resize operation.</p><p>Please see <a href="ch14.html" title="Chapter 14. Known limitations">Chapter 14, <i>Known limitations</i></a> for additional
+            remarks.</p></li><li><p>If you have the Guest Additions installed and they support
+            automatic <span class="bold"><strong>resizing</strong></span>, the Guest
+            Additions will automatically adjust the screen resolution of the
+            guest operating system. For example, if you are running a Windows
+            guest with a resolution of 1024x768 pixels and you then resize the
+            VM window to make it 100 pixels wider, the Guest Additions will
+            change the Windows display resolution to 1124x768.</p><p>Please see <a href="ch04.html" title="Chapter 4. Guest Additions">Chapter 4, <i>Guest Additions</i></a> for more
+            information about the Guest Additions.</p></li><li><p>Otherwise, if the window is bigger than the VM's screen, the
+            screen will be centered. If it is smaller, then scroll bars will
+            be added to the machine window.</p></li></ol></div></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="idp52167888"></a>1.8.6. Saving the state of the machine</h3></div></div></div><p>When you click on the "Close" button of your virtual machine
+      window (at the top right of the window, just like you would close any
+      other window on your system), VirtualBox asks you whether you want to
+      "save" or "power off" the VM. (As a shortcut, you can also press the
+      Host key together with "Q".)</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="390"><tr><td align="center"><img src="images/vm-close.png" align="middle" width="390"></td></tr></table></div><p>The difference between these three options is crucial.
+      They mean:</p><div class="itemizedlist"><ul type="disc"><li><p><span class="bold"><strong>Save the machine state:</strong></span> With
+          this option, VirtualBox "freezes" the virtual machine by completely
+          saving its state to your local disk.</p><p>When you start the VM again later, you will find that the VM
+          continues exactly where it was left off. All your programs will
+          still be open, and your computer resumes operation. Saving the state
+          of a virtual machine is thus in some ways similar to suspending a
+          laptop computer (e.g. by closing its lid).</p></li><li><p><span class="bold"><strong>Send the shutdown signal.</strong></span>
+          This will send an ACPI shutdown signal to the virtual machine, which
+          has the same effect as if you had pressed the power button on a real
+          computer. So long as the VM is running a fairly modern operating
+          system, this should trigger a proper shutdown mechanism from within
+          the VM.</p></li><li><p><span class="bold"><strong>Power off the machine:</strong></span> With
+          this option, VirtualBox also stops running the virtual machine, but
+          <span class="emphasis"><em>without</em></span> saving its state.</p><div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>This is equivalent to pulling the power plug on a real
+              computer without shutting it down properly. If you start the
+              machine again after powering it off, your operating system will
+              have to reboot completely and may begin a lengthy check of its
+              (virtual) system disks. As a result, this should not normally be
+              done, since it can potentially cause data loss or an
+              inconsistent state of the guest system on disk.</p></div><p>As an exception, if your virtual machine has any snapshots
+          (see the next chapter), you can use this option to quickly <span class="bold"><strong>restore the current snapshot</strong></span> of the virtual
+          machine. In that case, powering off the machine will not disrupt its
+          state, but any changes made since that snapshot was taken will be
+          lost.</p></li></ul></div><p>The <span class="bold"><strong>"Discard"</strong></span> button in the
+      VirtualBox Manager window discards a virtual machine's saved state. This
+      has the same effect as powering it off, and the same warnings
+      apply.</p></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="gui-vmgroups"></a>1.9. Using VM groups</h2></div></div></div><p>VM groups enable the user to create ad hoc groups of VMs, and to 
+    manage and perform functions on them collectively, as well as individually. 
+    There are a number of features relating to groups:</p><div class="orderedlist"><ol type="1"><li><p>
+            Create a group using GUI option 1) Drag one VM on top of another
+            VM. 
+          </p><p>
+            Create a group using GUI option 2) Select multiple VMs and select
+            "Group" on the right click menu, as follows:
+          </p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="354"><tr><td align="center"><img src="images/vm-groups.png" align="middle" width="354"></td></tr></table></div></li><li><p>
+            Command line option 1) Create group and assign VM:
+            </p><pre class="screen">VBoxManage modifyvm "Fred" --groups "/TestGroup"</pre><p>
+          </p><p>
+            Command line option 2) Detach VM from group, and delete group if
+            empty: </p><pre class="screen">VBoxManage modifyvm "Fred" --groups ""</pre><p>
+          </p></li><li><p>
+            Multiple groups e.g.:
+            </p><pre class="screen">VBoxManage modifyvm "Fred" --groups "/TestGroup,/TestGroup2"</pre><p>
+          </p></li><li><p>
+            Nested groups -- hierarchy of groups e.g.:
+            </p><pre class="screen">VBoxManage modifyvm "Fred" --groups "/TestGroup/TestGroup2"</pre><p>
+          </p></li><li><p>
+          Summary of group commands: Start, Pause, Reset, Close (save state,
+          send shutdown signal, poweroff), Discard Saved State, Show in File
+          System, Sort.
+          </p></li></ol></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="snapshots"></a>1.10. Snapshots</h2></div></div></div><p>With snapshots, you can save a particular state of a virtual machine
+    for later use. At any later time, you can revert to that state, even
+    though you may have changed the VM considerably since then. A snapshot of
+    a virtual machine is thus similar to a machine in "saved" state, as
+    described above, but there can be many of them, and these saved states are
+    preserved.</p><p>You can see the snapshots of a virtual machine by first selecting a
+    machine in the VirtualBox Manager and then clicking on the "Snapshots"
+    button at the top right. Until you take a snapshot of the machine, the
+    list of snapshots will be empty except for the "Current state" item, which
+    represents the "Now" point in the lifetime of the virtual machine.</p><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="idp55591632"></a>1.10.1. Taking, restoring and deleting snapshots</h3></div></div></div><p>There are three operations related to snapshots:</p><div class="orderedlist"><ol type="1"><li><p>You can <span class="bold"><strong>take a snapshot</strong></span>.
+            This makes a copy of the machine's current state, to which you can
+            go back at any given time later.</p><div class="itemizedlist"><ul type="disc"><li><p>If your VM is currently running, select "Take
+                  snapshot" from the "Machine" pull-down menu of the VM
+                  window.</p></li><li><p>If your VM is currently in either the "saved" or the
+                  "powered off" state (as displayed next to the VM in the
+                  VirtualBox main window), click on the "Snapshots" tab on the
+                  top right of the main window, and then</p><div class="itemizedlist"><ul type="circle"><li><p>either on the small camera icon (for "Take
+                        snapshot") or</p></li><li><p>right-click on the "Current State" item in the
+                        list and select "Take snapshot" from the menu.</p></li></ul></div></li></ul></div><p>In any case, a window will pop up and ask you for a snapshot
+            name. This name is purely for reference purposes to help you
+            remember the state of the snapshot. For example, a useful name
+            would be "Fresh installation from scratch, no Guest Additions", or
+            "Service Pack 3 just installed". You can also add a longer text in
+            the "Description" field if you want.</p><p>Your new snapshot will then appear in the snapshots list.
+            Underneath your new snapshot, you will see an item called "Current
+            state", signifying that the current state of your VM is a
+            variation based on the snapshot you took earlier. If you later
+            take another snapshot, you will see that they will be displayed in
+            sequence, and each subsequent snapshot is derived from an earlier
+            one:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="425"><tr><td align="center"><img src="images/snapshots-1.png" align="middle" width="425"></td></tr></table></div><p>VirtualBox imposes no limits on the number of snapshots you
+            can take. The only practical limitation is disk space on your
+            host: each snapshot stores the state of the virtual machine and
+            thus occupies some disk space. (See the next section for details
+            on what exactly is stored in a snapshot.)</p></li><li><p>You can <span class="bold"><strong>restore a snapshot</strong></span>
+            by right-clicking on any snapshot you have taken in the list of
+            snapshots. By restoring a snapshot, you go back (or forward) in
+            time: the current state of the machine is lost, and the machine is
+            restored to the exact state it was in when the snapshot was
+            taken.<sup>[<a name="idp55604528" href="#ftn.idp55604528">4</a>]</sup></p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Restoring a snapshot will affect the virtual hard drives
+              that are connected to your VM, as the entire state of the
+              virtual hard drive will be reverted as well. This means also
+              that all files that have been created since the snapshot and all
+              other file changes <span class="emphasis"><em>will be lost. </em></span>In order
+              to prevent such data loss while still making use of the snapshot
+              feature, it is possible to add a second hard drive in
+              "write-through" mode using the
+              <code class="computeroutput">VBoxManage</code> interface and use it
+              to store your data. As write-through hard drives are
+              <span class="emphasis"><em>not</em></span> included in snapshots, they remain
+              unaltered when a machine is reverted. See <a href="ch05.html#hdimagewrites" title="5.4. Special image write modes">Section 5.4, &#8220;Special image write modes&#8221;</a> for details.</p></div><p>To avoid losing the current state when restoring a snapshot,
+            you can create a new snapshot before the restore.</p><p>By restoring an earlier snapshot and taking more snapshots
+            from there, it is even possible to create a kind of alternate
+            reality and to switch between these different histories of the
+            virtual machine. This can result in a whole tree of virtual
+            machine snapshots, as shown in the screenshot above.</p></li><li><p>You can also <span class="bold"><strong>delete a
+            snapshot</strong></span>, which will not affect the state of the
+            virtual machine, but only release the files on disk that
+            VirtualBox used to store the snapshot data, thus freeing disk
+            space. To delete a snapshot, right-click on it in the snapshots
+            tree and select "Delete". As of VirtualBox 3.2, snapshots can be
+            deleted even while a machine is running.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Whereas taking and restoring snapshots are fairly quick
+                operations, deleting a snapshot can take a considerable amount
+                of time since large amounts of data may need to be copied
+                between several disk image files. Temporary disk files may
+                also need large amounts of disk space while the operation is
+                in progress.</p></div><p>There are some situations which cannot be handled while a VM
+            is running, and you will get an appropriate message that you need
+            to perform this snapshot deletion when the VM is shut down.</p></li></ol></div></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="idp55615024"></a>1.10.2. Snapshot contents</h3></div></div></div><p>Think of a snapshot as a point in time that you have preserved.
+      More formally, a snapshot consists of three things:</p><div class="itemizedlist"><ul type="disc"><li><p>It contains a complete copy of the VM settings, including
+            the hardware configuration, so that when you restore a snapshot,
+            the VM settings are restored as well. (For example, if you changed
+            the hard disk configuration or the VM's system settings, that
+            change is undone when you restore the snapshot.)</p><p>The copy of the settings is stored in the machine
+            configuration, an XML text file, and thus occupies very little
+            space.</p></li><li><p>The complete state of all the virtual disks attached to the
+            machine is preserved. Going back to a snapshot means that all
+            changes that had been made to the machine's disks -- file by file,
+            bit by bit -- will be undone as well. Files that were since
+            created will disappear, files that were deleted will be restored,
+            changes to files will be reverted.</p><p>(Strictly speaking, this is only true for virtual hard disks
+            in "normal" mode. As mentioned above, you can configure disks to
+            behave differently with snapshots; see <a href="ch05.html#hdimagewrites" title="5.4. Special image write modes">Section 5.4, &#8220;Special image write modes&#8221;</a>. Even more formally and technically
+            correct, it is not the virtual disk itself that is restored when a
+            snapshot is restored. Instead, when a snapshot is taken,
+            VirtualBox creates differencing images which contain only the
+            changes since the snapshot were taken, and when the snapshot is
+            restored, VirtualBox throws away that differencing image, thus
+            going back to the previous state. This is both faster and uses
+            less disk space. For the details, which can be complex, please see
+            <a href="ch05.html#diffimages" title="5.5. Differencing images">Section 5.5, &#8220;Differencing images&#8221;</a>.)</p><p>Creating the differencing image as such does not occupy much
+            space on the host disk initially, since the differencing image
+            will initially be empty (and grow dynamically later with each
+            write operation to the disk). The longer you use the machine after
+            having created the snapshot, however, the more the differencing
+            image will grow in size.</p></li><li><p>Finally, if you took a snapshot while the machine was
+            running, the memory state of the machine is also saved in the
+            snapshot (the same way the memory can be saved when you close the
+            VM window). When you restore such a snapshot, execution resumes at
+            exactly the point when the snapshot was taken.</p><p>The memory state file can be as large as the memory size of
+            the virtual machine and will therefore occupy quite some disk
+            space as well.</p></li></ul></div></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="configbasics"></a>1.11. Virtual machine configuration</h2></div></div></div><p>When you select a virtual machine from the list in the Manager
+    window, you will see a summary of that machine's settings on the
+    right.</p><p>Clicking on the "Settings" button in the toolbar at the top brings
+    up a detailed window where you can configure many of the properties of the
+    selected VM. But be careful: even though it is possible to change all VM
+    settings after installing a guest operating system, certain changes might
+    prevent a guest operating system from functioning correctly if done after
+    installation.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The "Settings" button is disabled while a VM is either in the
+      "running" or "saved" state. This is simply because the settings dialog
+      allows you to change fundamental characteristics of the virtual computer
+      that is created for your guest operating system, and this operating
+      system may not take it well when, for example, half of its memory is
+      taken away from under its feet. As a result, if the "Settings" button is
+      disabled, shut down the current VM first.</p></div><p>VirtualBox provides a plethora of parameters that can be changed for
+    a virtual machine. The various settings that can be changed in the
+    "Settings" window are described in detail in <a href="ch03.html" title="Chapter 3. Configuring virtual machines">Chapter 3, <i>Configuring virtual machines</i></a>. Even more parameters are available with the
+    VirtualBox command line interface; see <a href="ch08.html" title="Chapter 8. VBoxManage">Chapter 8, <i>VBoxManage</i></a>.</p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp55629568"></a>1.12. Removing virtual machines</h2></div></div></div><p>To remove a virtual machine which you no longer need, right-click on
+    it in the Manager's VM list select "Remove" from the context menu that
+    comes up.</p><p>A confirmation window will come up that allows you to select whether
+    the machine should only be removed from the list of machines or whether
+    the files associated with it should also be deleted.</p><p>The "Remove" menu item is disabled while a machine is
+    running.</p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="clone"></a>1.13. Cloning virtual machines</h2></div></div></div><p>To experiment with a VM configuration, test different guest OS levels
+    or to simply backup a VM, VirtualBox can create a full or a linked copy of
+    an existing VM.<sup>[<a name="idp55633296" href="#ftn.idp55633296">5</a>]</sup></p><p>A wizard will guide you through the clone process:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="354"><tr><td align="center"><img src="images/clone-vm.png" align="middle" width="354"></td></tr></table></div><p>This wizard can be invoked from the context menu of the Manager's VM
+    list (select "Clone") or the "Snapshots" view of the selected VM. First
+    choose a new name for the clone. When you select <span class="bold"><strong>Reinitialize the MAC address of all network cards</strong></span>
+    every network card get a new MAC address assigned. This is useful when
+    both, the source VM and the cloned VM, have to operate on the same network.
+    If you leave this unchanged, all network cards have the same MAC address
+    like the one in the source VM. Depending on how you invoke the wizard you
+    have different choices for the cloning operation. First you need to decide
+    if the clone should be linked to the source VM or a fully independent clone
+    should be created:</p><div class="itemizedlist"><ul type="disc"><li><p><span class="bold"><strong>Full clone:</strong></span> In this mode all
+             depending disk images are copied to the new VM folder. The clone
+             can fully operate without the source VM.
+         </p></li><li><p><span class="bold"><strong>Linked clone:</strong></span> In this mode new
+             differencing disk images are created where the parent disk images
+             are the source disk images. If you selected the current state of
+             the source VM as clone point, a new snapshot will be created
+             implicitly.
+         </p></li></ul></div><p>After selecting the clone mode, you need to decide about what exactly
+    should be cloned. You can always create a clone of the <span class="italic">current state</span> only or <span class="italic">all</span>. When you select <span class="italic">all</span>, the current state and in addition all
+    snapshots are cloned. Have you started from a snapshot which has additional
+    children, you can also clone the <span class="italic">current state and
+        all children</span>. This creates a clone starting with this
+    snapshot and includes all child snaphots.</p><p>The clone operation itself can be a lengthy operation depending on
+    the size and count of the attached disk images. Also keep in mind that
+    every snapshot has differencing disk images attached, which need to be
+    cloned as well.</p><p>The "Clone" menu item is disabled while a machine is running.</p><p>For how to clone a VM at the command line, please see <a href="ch08.html#vboxmanage-clonevm" title="8.9. VBoxManage clonevm">Section 8.9, &#8220;VBoxManage clonevm&#8221;</a>.</p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="ovf"></a>1.14. Importing and exporting virtual machines</h2></div></div></div><p>VirtualBox can import and export virtual machines in the
+    industry-standard Open Virtualization Format (OVF).<sup>[<a name="idp55647600" href="#ftn.idp55647600">6</a>]</sup></p><p>OVF is a cross-platform standard supported by many virtualization
+    products which allows for creating ready-made virtual machines that can
+    then be imported into a virtualizer such as VirtualBox. VirtualBox makes
+    OVF import and export easy to access and supports it from the Manager
+    window as well as its command-line interface. This allows for packaging
+    so-called <span class="bold"><strong>virtual appliances</strong></span>: disk images
+    together with configuration settings that can be distributed easily. This
+    way one can offer complete ready-to-use software packages (operating
+    systems with applications) that need no configuration or installation
+    except for importing into VirtualBox.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The OVF standard is complex, and support in VirtualBox is an
+        ongoing process. In particular, no guarantee is made that VirtualBox
+        supports all appliances created by other virtualization software. For
+        a list of known limitations, please see <a href="ch14.html" title="Chapter 14. Known limitations">Chapter 14, <i>Known limitations</i></a>.</p></div><p>Appliances in OVF format can appear in two variants:</p><div class="orderedlist"><ol type="1"><li><p>They can come in several files, as one or several disk images,
+          typically in the widely-used VMDK format (see <a href="ch05.html#vdidetails" title="5.2. Disk image files (VDI, VMDK, VHD, HDD)">Section 5.2, &#8220;Disk image files (VDI, VMDK, VHD, HDD)&#8221;</a>) and a textual description file in an XML
+          dialect with an <code class="computeroutput">.ovf</code> extension.
+          These files must then reside in the same directory for VirtualBox to
+          be able to import them.</p></li><li><p>Alternatively, the above files can be packed together into a
+          single archive file, typically with an
+          <code class="computeroutput">.ova</code> extension. (Such archive files
+          use a variant of the TAR archive format and can therefore be
+          unpacked outside of VirtualBox with any utility that can unpack
+          standard TAR files.)</p></li></ol></div><p>To <span class="bold"><strong>import</strong></span> an appliance in one of
+    the above formats, simply double-click on the OVF/OVA file.<sup>[<a name="idp55657744" href="#ftn.idp55657744">7</a>]</sup> Alternatively, select "File" -&gt; "Import appliance" from
+    the Manager window. In the file dialog that comes up, navigate to the file
+    with either the <code class="computeroutput">.ovf</code> or the
+    <code class="computeroutput">.ova</code> file extension.</p><p>If VirtualBox can handle the file, a dialog similar to the following
+    will appear:</p><div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="425"><tr><td align="center"><img src="images/ovf-import.png" align="middle" width="425"></td></tr></table></div><p>This presents the virtual machines described in the OVF
+    file and allows you to change the virtual machine settings by
+    double-clicking on the description items. Once you click on <span class="bold"><strong>"Import"</strong></span>, VirtualBox will copy the disk images and
+    create local virtual machines with the settings described in the dialog.
+    These will then show up in the Manager's list of virtual machines.</p><p>Note that since disk images tend to be big, and VMDK images that
+    come with virtual appliances are typically shipped in a special compressed
+    format that is unsuitable for being used by virtual machines directly, the
+    images will need to be unpacked and copied first, which can take a few
+    minutes.</p><p>For how to import an image at the command line, please see <a href="ch08.html#vboxmanage-import" title="8.10. VBoxManage import">Section 8.10, &#8220;VBoxManage import&#8221;</a>.</p><p>Conversely, to <span class="bold"><strong>export</strong></span> virtual
+    machines that you already have in VirtualBox, select "File" -&gt; "Export
+    appliance". A different dialog window shows up that allows you to combine
+    several virtual machines into an OVF appliance. Then, select the target
+    location where the target files should be stored, and the conversion
+    process begins. This can again take a while.</p><p>For how to export an image at the command line, please see <a href="ch08.html#vboxmanage-export" title="8.11. VBoxManage export">Section 8.11, &#8220;VBoxManage export&#8221;</a>.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>OVF cannot describe snapshots that were taken for a virtual
+        machine. As a result, when you export a virtual machine that has
+        snapshots, only the current state of the machine will be exported, and
+        the disk images in the export will have a "flattened" state identical
+        to the current state of the virtual machine.</p></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="globalsettings"></a>1.15. Global Settings</h2></div></div></div><p>The global settings dialog can be reached through the
+    <span class="bold"><strong>File</strong></span> menu, selecting the
+    <span class="bold"><strong>Preferences...</strong></span> item. It offers a selection
+    of settings which apply to all virtual machines of the current user or in
+    the case of <span class="bold"><strong>Extensions</strong></span> to the entire
+    system:
+    </p><div class="orderedlist"><ol type="1"><li><p><span class="bold"><strong>General</strong></span> Enables the user to
+         specify the default folder/directory for VM files, and the VRDP
+         Authentication Library.</p></li><li><p><span class="bold"><strong>Input</strong></span> Enables the user to
+         specify the Host Key. It identifies the key that toggles whether the
+         cursor is in the focus of the VM or the Host operating system
+         windows (see <a href="ch01.html#keyb_mouse_normal" title="1.8.2. Capturing and releasing keyboard and mouse">Section 1.8.2, &#8220;Capturing and releasing keyboard and mouse&#8221;</a>) and which is also
+         used to trigger certain VM actions (see <a href="ch01.html#specialcharacters" title="1.8.3. Typing special characters">Section 1.8.3, &#8220;Typing special characters&#8221;</a>)</p></li><li><p><span class="bold"><strong>Update</strong></span> Enables the user
+         to specify various settings for Automatic Updates.</p></li><li><p><span class="bold"><strong>Language</strong></span> Enables the user to
+         specify the GUI language.</p></li><li><p><span class="bold"><strong>Display</strong></span> Enables the user to
+         specify the screen resolution, and its width and height.</p></li><li><p><span class="bold"><strong>Network</strong></span> Enables the user to
+         configure the details of Host Only Networks.</p></li><li><p><span class="bold"><strong>Extensions</strong></span> Enables the user
+         to list and manage the installed extension packages.</p></li><li><p><span class="bold"><strong>Proxy</strong></span> Enables the user to
+         configure a HTTP Proxy Server.</p></li></ol></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="frontends"></a>1.16. Alternative front-ends</h2></div></div></div><p>As briefly mentioned in <a href="ch01.html#features-overview" title="1.3. Features overview">Section 1.3, &#8220;Features overview&#8221;</a>,
+    VirtualBox has a very flexible internal design that allows for using
+    multiple interfaces to control the same virtual machines. To illustrate,
+    you can, for example, start a virtual machine with the VirtualBox Manager
+    window and then stop it from the command line. With VirtualBox's support
+    for the Remote Desktop Protocol (RDP), you can even run virtual machines
+    remotely on a headless server and have all the graphical output redirected
+    over the network.</p><p>In detail, the following front-ends are shipped in the standard
+    VirtualBox package:</p><div class="orderedlist"><ol type="1"><li><p><code class="computeroutput">VirtualBox</code> is the VirtualBox
+          Manager. This graphical user interface uses the Qt toolkit; most of
+          this User Manual is dedicated to describing it. While this is the
+          easiest to use, some of the more advanced VirtualBox features are
+          kept away from it to keep it simple.</p></li><li><p><code class="computeroutput">VBoxManage</code> is our
+          command-line interface for automated and very detailed control of
+          every aspect of VirtualBox. It is described in <a href="ch08.html" title="Chapter 8. VBoxManage">Chapter 8, <i>VBoxManage</i></a>.</p></li><li><p><code class="computeroutput">VBoxSDL</code> is an alternative,
+          simple graphical front-end with an intentionally limited feature
+          set, designed to only display virtual machines that are controlled
+          in detail with <code class="computeroutput">VBoxManage</code>. This is
+          interesting for business environments where displaying all the bells
+          and whistles of the full GUI is not feasible.
+          <code class="computeroutput">VBoxSDL</code> is described in <a href="ch09.html#vboxsdl" title="9.1. VBoxSDL, the simplified VM displayer">Section 9.1, &#8220;VBoxSDL, the simplified VM displayer&#8221;</a>.</p></li><li><p>Finally, <code class="computeroutput">VBoxHeadless</code> is yet
+          another front-end that produces no visible output on the host at
+          all, but merely acts as a RDP server if the VirtualBox Remote
+          Desktop Extension (VRDE) is installed. As opposed to the other
+          graphical interfaces, the headless front-end requires no graphics
+          support. This is useful, for example, if you want to host your
+          virtual machines on a headless Linux server that has no X Window
+          system installed. For details, see <a href="ch07.html#vboxheadless" title="7.1.2. VBoxHeadless, the remote desktop server">Section 7.1.2, &#8220;VBoxHeadless, the remote desktop server&#8221;</a>.</p></li></ol></div><p>If the above front-ends still do not satisfy your
+    particular needs, it is possible to create yet another front-end to the
+    complex virtualization engine that is the core of VirtualBox, as the
+    VirtualBox core neatly exposes all of its features in a clean API; please
+    refer to <a href="ch11.html" title="Chapter 11. VirtualBox programming interfaces">Chapter 11, <i>VirtualBox programming interfaces</i></a>.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a name="ftn.idp51996096" href="#idp51996096">1</a>] </sup>Support for 64-bit Windows was added with VirtualBox
+                  1.5.</p></div><div class="footnote"><p><sup>[<a name="ftn.idp52002400" href="#idp52002400">2</a>] </sup>Preliminary Mac OS X support (beta stage) was added with
+            VirtualBox 1.4, full support with 1.6. Mac OS X 10.4 (Tiger)
+            support was removed with VirtualBox 3.1.</p></div><div class="footnote"><p><sup>[<a name="ftn.idp52009888" href="#idp52009888">3</a>] </sup>Support for 64-bit Linux was added with VirtualBox
+            1.4.</p></div><div class="footnote"><p><sup>[<a name="ftn.idp55604528" href="#idp55604528">4</a>] </sup>Both the terminology and the functionality of restoring
+                snapshots has changed with VirtualBox 3.1. Before that
+                version, it was only possible to go back to the very last
+                snapshot taken -- not earlier ones, and the operation was
+                called "Discard current state" instead of "Restore last
+                snapshot". The limitation has been lifted with version 3.1. It
+                is now possible to restore <span class="emphasis"><em>any</em></span> snapshot,
+                going backward and forward in time.</p></div><div class="footnote"></div><div class="footnote"><p><sup>[<a name="ftn.idp55647600" href="#idp55647600">6</a>] </sup>OVF support was originally introduced with VirtualBox 2.2 and
+        has seen major improvements with every version since.</p></div><div class="footnote"><p><sup>[<a name="ftn.idp55657744" href="#idp55657744">7</a>] </sup>Starting with version 4.0, VirtualBox creates file type
+        associations for OVF and OVA files on your host operating
+        system.</p></div></div></div></body></html>
